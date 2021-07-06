@@ -1897,8 +1897,8 @@ footer .copy-right {
 .top-scroll {
     display: none;
     position: fixed;
-    right: 2px;
-    bottom: 90px;
+    right: 160px;
+    bottom: 78px;
     padding-top: 15px;
     margin-bottom: 0;
     z-index: 998;
@@ -2139,4 +2139,15 @@ footer .copy-right {
     height: 50px;
     padding: 0;
     margin: 0;
+}
+
+
+/* 收缩导航栏按钮 */
+.floating-toc-btn {
+    position: fixed;
+    right: 160px;
+    bottom: 134px;
+    padding-top: 15px;
+    margin-bottom: 0;
+    z-index: 998;
 }
