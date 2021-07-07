@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="个人博客的搭建以及学习历程, Java">
+    <meta name="keywords" content="java学习笔记2 - java基础, Java">
     <meta name="description" content="可能有你感兴趣的东西~">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>个人博客的搭建以及学习历程 | 光影N棱镜</title>
+    <title>java学习笔记2 - java基础 | 光影N棱镜</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -225,12 +225,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">个人博客的搭建以及学习历程</h1>
+                    <h1 class="description center-align post-title">java学习笔记2 - java基础</h1>
                 </div>
             </div>
         </div>
@@ -350,20 +350,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Typora/">
-                                <span class="chip bg-color">Typora</span>
+                            <a href="/tags/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">自学笔记</span>
                             </a>
                         
-                            <a href="/tags/Hexo/">
-                                <span class="chip bg-color">Hexo</span>
-                            </a>
-                        
-                            <a href="/tags/Git/">
-                                <span class="chip bg-color">Git</span>
-                            </a>
-                        
-                            <a href="/tags/GitHub/">
-                                <span class="chip bg-color">GitHub</span>
+                            <a href="/tags/java/">
+                                <span class="chip bg-color">java</span>
                             </a>
                         
                     </div>
@@ -374,8 +366,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                前端
+                            <a href="/categories/java/" class="post-category">
+                                java
                             </a>
                         
                     </div>
@@ -387,7 +379,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-05
+                    2021-07-07
                 </div>
                 
 
@@ -401,7 +393,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    416
                 </div>
                 
 
@@ -418,165 +410,73 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>温故而知新，可以为师矣。</p>
-<p>对我来说，搭建自己的个人博客不仅仅是为了自己的兴趣爱好。同时，写博客也可以很好的记录下自己成长的每一个脚印。我们往往在一路再向前赶路，却忘了放慢脚步。放慢脚步来反思自己的不足，明白自己为何跌倒。这样我们才可以走得更远。</p>
-<h2 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h2><p>这一次我们搭建的博客是需要使用：</p>
-<ul>
-<li>Git</li>
-<li>Hexo</li>
-<li>Node.js</li>
+                <p>自用的学习笔记，若有错误欢迎指出。</p>
+<h2 id="java关键字"><a href="#java关键字" class="headerlink" title="java关键字"></a>java关键字</h2><p>java所有的组成部分都需要名字。类名、变量名以及方法名都被称之为标识符。</p>
+<p>以下的这些都是java的关键字，在命名的时候<strong>不能使用</strong>。</p>
+<p><img src="/2021/07/07/java-xue-xi-bi-ji-2-java-ji-chu/java%E5%85%B3%E9%94%AE%E5%AD%97.png" alt="java关键字"></p>
+<h2 id="java命名注意点"><a href="#java命名注意点" class="headerlink" title="java命名注意点"></a>java命名注意点</h2><ul>
+<li>所有的标识符都应该以字母(A-Z, a - z)、美元符$、或者下划线<code>_</code>开始。</li>
+<li>首字符之后可以是字母(A-Z, a - z)、美元符$、或者下划线<code>_</code>的任意字符组合。</li>
+<li><strong>不能使用关键字作为变量名或者方法名。</strong></li>
+<li>标识符是<strong>大小写敏感</strong>的。</li>
+<li>合法标识符举例：<ul>
+<li>age</li>
+<li>$salary</li>
+<li>_value</li>
+<li>_1boy</li>
 </ul>
-<h3 id="下载并安装Node-js"><a href="#下载并安装Node-js" class="headerlink" title="下载并安装Node.js"></a>下载并安装Node.js</h3><p>其中，我们需要在Node.js的官网上面下载Node.js的安装包。</p>
-<p><img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/Node.js_phase01.png" alt="Node.js_phase01"></p>
-<p>一般我们选择正式版，正式版还是最稳定的版本。(使用最新版本可能会与教程的步骤有所出入)</p>
-<p>一般在安装过程中点击next键按照默认的设置来就行。安装路径按照自己喜好来就行。</p>
-<p>使用cmd面板来测试Node.js是否有安装成功。使用win键+R键来呼出cmd面板。输入node -v命令行来查看我们所安装的node的版本。出现版本号就证明我们已经安装好了。</p>
-<pre class=" language-bash"><code class="language-bash">node -v <span class="token comment" spellcheck="true">#查看node版本</span>
-<span class="token function">npm</span> -v <span class="token comment" spellcheck="true">#查看npm版本</span>
-</code></pre>
-<img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/cmd_node -v&npm -v.png" alt="cmd_node -v&npm -v" style="zoom:80%;">
-
-
-
-
-
-<p>由于我们国内有墙*<del>你懂的</del>*,导致一些镜像源上下载的很慢。所以，我们还需要来利用npm来安装cnpm。这样可以加快下载速度。</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g cnpm --registry<span class="token operator">=</span>http://registry.npm.taobao.org <span class="token comment" spellcheck="true">#安装淘宝的cnpm 管理器</span>
-</code></pre>
-<p>耐心的等待之后就可以下载完成。</p>
-<img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/cmd_hexo_deployer_git.png" alt="cmd_hexo_deployer_git" style="zoom:80%;">
-
-<p>当我们输入cnpm后，出现反馈就说明我们的cnpm也已经安装好了。</p>
-<img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/cmd_cnpm_check.png" alt="cmd_cnpm_check" style="zoom:80%;">
-
-
-
-
-
-<h3 id="安装Hexo框架"><a href="#安装Hexo框架" class="headerlink" title="安装Hexo框架"></a>安装Hexo框架</h3><p>我们终于可以下载并且安装Hexo框架了。</p>
-<p>在控制台输入代码：</p>
-<pre class=" language-bash"><code class="language-bash">cnpm <span class="token function">install</span> -g hexo-cli <span class="token comment" spellcheck="true">#安装hexo框架</span>
-</code></pre>
-<img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/cmd_hexo_download.png" alt="cmd_hexo_download" style="zoom:80%;">
-
-
-
-<p>输入代码hexo -v来查看安装的hexo框架版本。</p>
-<pre class=" language-bash"><code class="language-bash">hexo -v <span class="token comment" spellcheck="true">#查看hexo版本</span>
-</code></pre>
-<img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/cmd_hexo_v.png" alt="cmd_hexo_v" style="zoom:80%;">
-
-
-
-<p>使用代码mkdir blog来创建blog目录</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">mkdir</span> blog <span class="token comment" spellcheck="true">#创建blog目录</span>
-</code></pre>
-<img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/cmd_mkdir_blog.png" alt="cmd_mkdir_blog" style="zoom:80%;">
-
-
-
-<p>如图所示，我们已经在目录下成功创建了一个blog文件夹。</p>
-<img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/pc_mkdir_blog.png" alt="pc_mkdir_blog" style="zoom: 67%;">
-
-
-
-<p>这里我不想把我的博客文件装在C盘，我把文件装在F盘</p>
-<p>具体指令需要查看cmd的常用指令集合。<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_33862644/article/details/81171521">点击这里查看</a></p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">cd</span> /d F:study <span class="token comment" spellcheck="true">#跳转到其他硬盘的其他文件夹</span>
-</code></pre>
-<img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/cmd_cd.png" alt="cmd_cd" style="zoom:80%;">
-
-
-
-<p>使用cd blog来进入blog的根目录</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">cd</span> blog <span class="token comment" spellcheck="true">#进入blog目录</span>
-</code></pre>
-<img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/cmd_cd_blog.png" alt="cmd_cd_blog" style="zoom:80%;">
-
-
-
-<h2 id="初始化博客"><a href="#初始化博客" class="headerlink" title="初始化博客"></a>初始化博客</h2><p>使用hexo init生成博客 初始化博客</p>
-<pre class=" language-bash"><code class="language-bash">hexo init <span class="token comment" spellcheck="true">#生成博客 初始化博客</span>
-</code></pre>
-<img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/cmd_hexo_init.png" alt="cmd_hexo_init" style="zoom:80%;">
-
-
-
-<p>随后我们就可以使用hexo s来启动博客的本地服务器，来正式的查看我们的网页了。</p>
-<pre class=" language-bash"><code class="language-bash">hexo s <span class="token comment" spellcheck="true">#启动本地博客服务</span>
-</code></pre>
-<img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/cmd_hexo_s.png" alt="cmd_hexo_s" style="zoom:80%;">
-
-<p>随后在网页上输入网页链接 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> 来查看我们的博客网页。</p>
-<p>如图所示，我们已经有了基本自带样式的博客网页，我们所做的从搭建环境到初始化博客已经全部做完了。接下来，就是开始创建新的博客内容以及将我们的博客托管到GitHub网页上。</p>
-<img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/web_hexo_blogpage.png" alt="web_hexo_blogpage" style="zoom:80%;">
-
-
-
-<h2 id="创建新的博客内容"><a href="#创建新的博客内容" class="headerlink" title="创建新的博客内容"></a>创建新的博客内容</h2><p>既然有了博客的基本框架，那么我就该把我们所想要分享的内容放到博客网页上去。具体的步骤如下：</p>
-<p>使用命令行hexo n“这是博客文章名字”来创建新的博客内容。</p>
-<pre class=" language-bash"><code class="language-bash">hexo n <span class="token string">"这是博客文章名字"</span> <span class="token comment" spellcheck="true">#创建新的文章 </span>
-</code></pre>
-<img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/cmd_hexo_n.png" alt="cmd_hexo_n" style="zoom:80%;">
-
-
-
-
-
-<p>接下来我们就可以使用文本编辑工具Markdown来编辑我们的博文。这里我也推荐给大家一款很好用的软件<a target="_blank" rel="noopener" href="https://www.typora.io/">Typora</a>.</p>
-<p>待我们编辑完博文之后，我们就该将新的博文发布我们的网页里面。</p>
-<p>先清理一下，然后再生成博文。</p>
-<pre class=" language-bash"><code class="language-bash">hexo c <span class="token comment" spellcheck="true">#清理一下hexo g #生成</span>
-</code></pre>
-<img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/cmd_hexo_g.png" alt="cmd_hexo_g" style="zoom:80%;">
-
-
-
-
-
-<h2 id="将博客部署到GitHub上"><a href="#将博客部署到GitHub上" class="headerlink" title="将博客部署到GitHub上"></a>将博客部署到GitHub上</h2><p>我们的博客不可能只能在本地localhost上查看，我们需要将我们所想分享的东西放到网上去，让更多的人所了解。</p>
-<p>首先我们要先登录到<a target="_blank" rel="noopener" href="https://github.com/">GitHub</a>上。</p>
-<p>登录之后我们点击”Your repositories”，在选择新建一个存储库。</p>
-<img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/web_github_newRe.png" alt="web_github_newRe" style="zoom:80%;">
-
-
-
-
-
-<p>然后我们一定要在对存储库命名的时候一定要是你的昵称比如我们的就是：MingFang310.github.io </p>
-<p>然后我们点击create就好</p>
-<img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/web_github.png" alt="web_github" style="zoom:80%;">
-
-
-
-<p>【重要】随后我们需要在博客的目录下安装git的部署插件</p>
-<pre class=" language-bash"><code class="language-bash">cnpm <span class="token function">install</span> --save hexo-deployer-git <span class="token comment" spellcheck="true">#在blog目录下安装git部署插件</span>
-</code></pre>
-<img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/cmd_hexo_deployer_git.png" alt="cmd_hexo_deployer_git" style="zoom:80%;">
-
-<p>(我这边自己已经装过一遍了，初次安装的时候，等待一下就好)</p>
-<p>同时我们也需要更改_config.yml文件的配置，这里我们用文本编辑器VSCode来打开该文件。</p>
-<p>点击进去以后找到#Deployment并且修改代码：</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># Deployment    </span>
-<span class="token comment" spellcheck="true">## Docs: https://hexo.io/docs/deployment.html    </span>
-deploy:          
-    type: <span class="token function">git</span>         
-    repo: https://github.com/YourGithubName/YourGithubName.github.io.git          
-    branch: master
-</code></pre>
-<p>网站链接为你在GitHub上创建的存储库的链接</p>
-<p><img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/vscode_change_deployment.png" alt="vscode_change_deployment"></p>
-<p>最后一步，也就是使用命令行hexo d 对该博客部署到GitHub上面。</p>
-<pre class=" language-bash"><code class="language-bash">hexo d    <span class="token comment" spellcheck="true">#部署到远程Github仓库</span>
-</code></pre>
-<p>最后我们就可以直接用我们GitHub网页链接的后半段直接访问我们的博客了！</p>
-<p><img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/web_blog_link.png" alt="web_blog_link"></p>
-<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ol>
-<li><p>hexo引用本地图片无法显示: <a target="_blank" rel="noopener" href="https://blog.csdn.net/xjm850552586/article/details/84101345">https://blog.csdn.net/xjm850552586/article/details/84101345</a></p>
 </li>
-<li><p>手把手教你从0开始搭建自己的个人博客 |无坑版视频教程| hexo: <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty?from=search&amp;seid=15443300066182090076">https://www.bilibili.com/video/BV1Yb411a7ty?from=search&amp;seid=15443300066182090076</a></p>
+<li>非法标识符举例：<ul>
+<li>123abc</li>
+<li>207somker</li>
+<li>-salary</li>
+<li>#boy</li>
+</ul>
 </li>
-</ol>
+</ul>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><ul>
+<li><p>java是一门强类型语言</p>
+<ul>
+<li>要求变量的使用严格规定，所有的变量都必须先定义后使用。</li>
+</ul>
+</li>
+<li><p>java的数据类型分为两大类</p>
+<ul>
+<li>基本类型(primitive type)<ul>
+<li>数值类型<ul>
+<li>整数类型<ul>
+<li>byte: 占1个字节范围：-128~127</li>
+<li>short：占2个字节范围：-32768~32767</li>
+<li>int：占4个字节范围：-2147483648~2147483647</li>
+<li>long：占8个字节范围：略</li>
+</ul>
+</li>
+<li>浮点类型<ul>
+<li>float：占4个字节</li>
+<li>double：占8个字节</li>
+</ul>
+</li>
+<li>字符类型(char占8个字节)</li>
+</ul>
+</li>
+<li>Boolean类型(占1位其值只有true &amp; false)</li>
+</ul>
+</li>
+<li>引用类型(reference type)<ul>
+<li>类</li>
+<li>接口</li>
+<li>数组</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="什么是字节"><a href="#什么是字节" class="headerlink" title="什么是字节"></a>什么是字节</h2><ul>
+<li>位(bit)：是计算机内部数据最小单位。例：1100 1100是一个八位二进制数。</li>
+<li>字节(byte)：是计算机中数据处理的基本单位，习惯上用大写B来表示。</li>
+<li>1B(byte，字节) = 8bit(位)</li>
+<li>字符：是指计算机中使用的字母、数字、字和符号。</li>
+</ul>
 
                 
             </div>
@@ -603,7 +503,7 @@ deploy:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://mingfang310.github.io/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/">https://mingfang310.github.io/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/</a>
+                    <a href="https://mingfang310.github.io/2021/07/07/java-xue-xi-bi-ji-2-java-ji-chu/">https://mingfang310.github.io/2021/07/07/java-xue-xi-bi-ji-2-java-ji-chu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -641,20 +541,12 @@ deploy:
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Typora/">
-                                    <span class="chip bg-color">Typora</span>
+                                <a href="/tags/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">自学笔记</span>
                                 </a>
                             
-                                <a href="/tags/Hexo/">
-                                    <span class="chip bg-color">Hexo</span>
-                                </a>
-                            
-                                <a href="/tags/Git/">
-                                    <span class="chip bg-color">Git</span>
-                                </a>
-                            
-                                <a href="/tags/GitHub/">
-                                    <span class="chip bg-color">GitHub</span>
+                                <a href="/tags/java/">
+                                    <span class="chip bg-color">java</span>
                                 </a>
                             
                         </div>
@@ -826,29 +718,84 @@ deploy:
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/07/07/dos-ji-ben-zhi-ling/">
+                <a href="/2021/07/07/java-xue-xi-bi-ji-2-java-ji-chu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="DOS基本指令">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="java学习笔记2 - java基础">
                         
-                        <span class="card-title">DOS基本指令</span>
+                        <span class="card-title">java学习笔记2 - java基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            DOS常用的基本指令
+                            将会介绍java的基础内容。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-07
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-07
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/java/" class="post-category">
+                                    java
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">自学笔记</span>
+                    </a>
+                    
+                    <a href="/tags/java/">
+                        <span class="chip bg-color">java</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/07/07/java-xue-xi-bi-ji-1-java-ru-men/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="java学习笔记1 - java入门">
+                        
+                        <span class="card-title">java学习笔记1 - java入门</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            将会介绍java的诞生、java的特性，同时还会介绍JDK, JRE, JVM三者。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-07
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -864,78 +811,12 @@ deploy:
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/DOS/">
-                        <span class="chip bg-color">DOS</span>
-                    </a>
-                    
-                    <a href="/tags/Typora/">
-                        <span class="chip bg-color">Typora</span>
-                    </a>
-                    
                     <a href="/tags/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/">
                         <span class="chip bg-color">自学笔记</span>
                     </a>
                     
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="个人博客的搭建以及学习历程">
-                        
-                        <span class="card-title">个人博客的搭建以及学习历程</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-05
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Typora/">
-                        <span class="chip bg-color">Typora</span>
-                    </a>
-                    
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
-                    </a>
-                    
-                    <a href="/tags/Git/">
-                        <span class="chip bg-color">Git</span>
-                    </a>
-                    
-                    <a href="/tags/GitHub/">
-                        <span class="chip bg-color">GitHub</span>
+                    <a href="/tags/java/">
+                        <span class="chip bg-color">java</span>
                     </a>
                     
                 </div>
