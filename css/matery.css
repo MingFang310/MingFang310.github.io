@@ -2140,14 +2140,3 @@ footer .copy-right {
     padding: 0;
     margin: 0;
 }
-
-
-/* 收缩导航栏按钮 */
-.floating-toc-btn {
-    position: fixed;
-    right: 160px;
-    bottom: 134px;
-    padding-top: 15px;
-    margin-bottom: 0;
-    z-index: 998;
-}
