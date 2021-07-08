@@ -393,7 +393,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.9k
+                    2.5k
                 </div>
                 
 
@@ -662,7 +662,7 @@ type varName <span class="token punctuation">[</span><span class="token operator
 <span class="token keyword">final</span> <span class="token keyword">double</span> PI <span class="token operator">=</span> <span class="token number">3.14</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>常量名一般使用大写字符。</strong></p>
-<h2 id="java运算符"><a href="#java运算符" class="headerlink" title="java运算符"></a>java运算符</h2><p><a target="_blank" rel="noopener" href="https://www.runoob.com/java/java-operators.html?_t_t_t=0.3133259497117251">菜鸟教程-java运算符</a></p>
+<h2 id="java运算符"><a href="#java运算符" class="headerlink" title="java运算符"></a>java运算符</h2><p><a target="_blank" rel="noopener" href="https://www.runoob.com/java/java-operators.html?_t_t_t=0.3133259497117251">点这里到: 菜鸟教程-java运算符</a></p>
 <p>计算机的最基本用途之一就是执行数学运算，作为一门计算机语言，Java也提供了一套丰富的运算符来操纵变量。我们可以把运算符分成以下几组：</p>
 <ul>
 <li>算术运算符</li>
@@ -715,7 +715,90 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a <span class="token operator">&amp;&amp;</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// false</span>
 System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a <span class="token operator">||</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// true</span>
 System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token punctuation">(</span>a <span class="token operator">&amp;&amp;</span> b<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// true</span>
+
+<span class="token comment" spellcheck="true">//短路运算</span>
+<span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+<span class="token keyword">boolean</span> d <span class="token operator">=</span> <span class="token punctuation">(</span>c <span class="token operator">&lt;</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>c<span class="token operator">++</span> <span class="token operator">&lt;</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// false</span>
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 5</span>
 </code></pre>
+<h3 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h3><p><a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/bit-operation.html">点这里到：菜鸟教程-位运算</a></p>
+<p>从现代计算机中所有的数据二进制的形式存储在设备中。即 0、1 两种状态，计算机对二进制数据进行的运算(+、-、*、/)都是叫位运算，即将符号位共同参与运算的运算。</p>
+<table>
+<thead>
+<tr>
+<th align="left">符号</th>
+<th align="left">描述</th>
+<th align="left">运算规则</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>&amp;</code></td>
+<td align="left">与</td>
+<td align="left">两个位都为1时，结果才为1</td>
+</tr>
+<tr>
+<td align="left">`</td>
+<td align="left">`</td>
+<td align="left">或</td>
+</tr>
+<tr>
+<td align="left"><code>^</code></td>
+<td align="left">异或</td>
+<td align="left">两个位相同为0，相异为1</td>
+</tr>
+<tr>
+<td align="left"><code>~</code></td>
+<td align="left">取反</td>
+<td align="left">0变1，1变0</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;&lt;</code></td>
+<td align="left">左移</td>
+<td align="left">各二进位全部左移若干位，高位丢弃，低位补0</td>
+</tr>
+<tr>
+<td align="left"><code>&gt;&gt;</code></td>
+<td align="left">右移</td>
+<td align="left">各二进位全部右移若干位，对无符号数，高位补0，有符号数，各编译器处理方法不一样，有的补符号位（算术右移），有的补0（逻辑右移）</td>
+</tr>
+</tbody></table>
+<hr>
+<pre class=" language-bash"><code class="language-bash">A <span class="token operator">=</span> 0011 1100
+B <span class="token operator">=</span> 0000 1101
+
+<span class="token comment" spellcheck="true"># A &amp; B -> A与B</span>
+A <span class="token operator">&amp;</span> B <span class="token operator">=</span> 0000 1100
+
+<span class="token comment" spellcheck="true"># A | B -> A或B</span>
+A <span class="token operator">|</span> B <span class="token operator">=</span> 0011 1101
+
+<span class="token comment" spellcheck="true"># A ^ B -> A异或B</span>
+A ^ B <span class="token operator">=</span> 0011 0010
+
+<span class="token comment" spellcheck="true"># ~A -> 取反A</span>
+~A <span class="token operator">=</span> 1100 0011
+</code></pre>
+<p>思考：在计算机运算<code>2 * 8</code>中，用什么方式效率最高？</p>
+<ul>
+<li>采用位运算是最快的。采用<code>&lt;&lt;</code>左移来实现。</li>
+</ul>
+<h3 id="字符串连接符"><a href="#字符串连接符" class="headerlink" title="字符串连接符"></a>字符串连接符</h3><p>在<code>+</code>的两边只要出现了<code>String</code>，就会把其他的字符都变成<code>String</code>类型。</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> b <span class="token operator">=</span> <span class="token number">30</span><span class="token punctuation">;</span>
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a <span class="token operator">+</span> b <span class="token operator">+</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 输出结果为：50</span>
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">""</span> <span class="token operator">+</span> a <span class="token operator">+</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 输出结果为：2030</span>
+</code></pre>
+<h3 id="三元运算符"><a href="#三元运算符" class="headerlink" title="三元运算符"></a>三元运算符</h3><p><code>x ? y : z</code>这就是一个三元运算符。运行方式为：如果<code>x == ture</code> ，那么结果就为<code>y</code>，否则结果就为<code>z</code>。</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> score <span class="token operator">=</span> <span class="token number">80</span><span class="token punctuation">;</span>
+String grades <span class="token operator">=</span> score <span class="token operator">&lt;</span> <span class="token number">60</span> <span class="token operator">?</span> <span class="token string">"不及格"</span> <span class="token operator">:</span> <span class="token string">"及格"</span><span class="token punctuation">;</span>
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>grades<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//输出结果为：及格</span>
+</code></pre>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>在对照着视频把老师的知识点用博客这样的方式记录下来，这样不仅加深了这些知识的理解，同时也能更好的帮助我随时查阅。积少成多、聚沙成塔，只要坚持下来就没有什么搞不定的。</p>
+<p>之后，我也会继续学习java，继续更新博客。分享知识、结交朋友，感谢你的观看！</p>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p>B站：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV12J41137hu?p=30&share_source=copy_web">狂神说java</a></p>
+<p>菜鸟教程：<a target="_blank" rel="noopener" href="https://www.runoob.com/java/java-operators.html?_t_t_t=0.3133259497117251">java运算符</a></p>
+<p>菜鸟教程：<a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/bit-operation.html">位运算</a></p>
 
                 
             </div>
@@ -1260,7 +1343,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">4k</span>
+                        class="white-color">4.5k</span>
             
             
             
@@ -1490,9 +1573,9 @@ $(function () {
         if (windowWidth > 768) {
             document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
         }
-        </script>
+        </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
         
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 
 </html>
