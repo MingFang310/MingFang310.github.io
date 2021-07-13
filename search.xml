@@ -8,7 +8,7 @@
       <link href="/2021/07/13/java-xue-xi-bi-ji-4-java-fang-fa/"/>
       <url>/2021/07/13/java-xue-xi-bi-ji-4-java-fang-fa/</url>
       
-        <content type="html"><![CDATA[<p>自用的学习笔记，若有错误欢迎指出。</p><h2 id="java方法"><a href="#java方法" class="headerlink" title="java方法"></a>java方法</h2><ul><li>java方法是语句的集合，它们在一起执行一个功能。<ul><li>方法是解决一类问题的步骤的有序组合</li><li>方法包含于类或者对象中</li><li>方法在程序中被创建，在其他地方被引用</li></ul></li><li>设计方法的原则：方法本意是功能块，就是实现某个功能的语句块集合。我们设计方法的时候，最好保持方法的原子性。<strong>就是一个方法只能完成一个功能，这样利于我们后期的扩展。</strong></li></ul><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo01</span> <span class="token punctuation">&#123;</span>    <span class="token comment">//main方法</span>    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>        <span class="token keyword">int</span> sum <span class="token operator">=</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token number">88</span><span class="token punctuation">,</span> <span class="token number">48</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>sum<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span>    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>        <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="方法的定义"><a href="#方法的定义" class="headerlink" title="方法的定义"></a>方法的定义</h2><p>java的方法类似于其他语言的函数，是一<strong>段用来完成特定功能的代码片段</strong>。一般情况下，定义一个方法包含一下语法：</p><ul><li><strong>方法包含一个方法头和一个方法体</strong>。下面是一个方法的所有部分：<ul><li><strong>修饰符</strong>：修饰符，这是可选的，目的是告诉编辑器如何调用该方法。定义了该方法的访问类型。</li><li><strong>返回值类型</strong>：方法可能会返回值。<code>returnValueType</code> 是方法返回值的数据类型。有些方法执行所需的操作，但是没有返回值。在这种情况下，<code>returnValueType</code>是关键字void。</li><li><strong>方法名</strong>：是方法的实际名称。方法名和修饰符共同构成方法签名。</li><li><strong>参数类型</strong>：参数像是一个占位符。当方法被调用时，传递值给参数。这个值被称为实参或者变量。参数列表时指方法的参数类型、顺序和参数的个数。参数时可选的，方法可以不包含任何参数。<ul><li>形式参数：在方法被调用时用于接收外界输入的数据。</li><li>实参：调用方法时实际传给方法的数据。</li></ul></li><li><strong>方法体</strong>：方法体包含具体的语句，定义该方法的功能。</li></ul></li></ul><pre class="line-numbers language-java" data-language="java"><code class="language-java">修饰符 返回值类型 方法名<span class="token punctuation">(</span>参数类型 参数名<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>  <span class="token comment">//方法体</span>  <span class="token keyword">return</span> 返回值<span class="token punctuation">;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+        <content type="html"><![CDATA[<p>自用的学习笔记，若有错误欢迎指出。</p><h2 id="java方法"><a href="#java方法" class="headerlink" title="java方法"></a>java方法</h2><ul><li>java方法是语句的集合，它们在一起执行一个功能。<ul><li>方法是解决一类问题的步骤的有序组合</li><li>方法包含于类或者对象中</li><li>方法在程序中被创建，在其他地方被引用</li></ul></li><li>设计方法的原则：方法本意是功能块，就是实现某个功能的语句块集合。我们设计方法的时候，最好保持方法的原子性。<strong>就是一个方法只能完成一个功能，这样利于我们后期的扩展。</strong></li></ul><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo01</span> <span class="token punctuation">&#123;</span>    <span class="token comment">//main方法</span>    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>        <span class="token comment">//实际参数：实际上传递给方法的参数</span>        <span class="token keyword">int</span> sum <span class="token operator">=</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token number">88</span><span class="token punctuation">,</span> <span class="token number">48</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>sum<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span>    <span class="token comment">//参数a &amp; b 为形式参数</span>    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>        <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="方法的定义"><a href="#方法的定义" class="headerlink" title="方法的定义"></a>方法的定义</h2><p>java的方法类似于其他语言的函数，是一<strong>段用来完成特定功能的代码片段</strong>。一般情况下，定义一个方法包含一下语法：</p><ul><li><strong>方法包含一个方法头和一个方法体</strong>。下面是一个方法的所有部分：<ul><li><strong>修饰符</strong>：修饰符，这是可选的，目的是告诉编辑器如何调用该方法。定义了该方法的访问类型。</li><li><strong>返回值类型</strong>：方法可能会返回值。<code>returnValueType</code> 是方法返回值的数据类型。有些方法执行所需的操作，但是没有返回值。在这种情况下，<code>returnValueType</code>是关键字void。</li><li><strong>方法名</strong>：是方法的实际名称。方法名和修饰符共同构成方法签名。</li><li><strong>参数类型</strong>：参数像是一个占位符。当方法被调用时，传递值给参数。这个值被称为实参或者变量。参数列表时指方法的参数类型、顺序和参数的个数。参数时可选的，方法可以不包含任何参数。<ul><li>形式参数：在方法被调用时用于接收外界输入的数据。</li><li>实参：调用方法时实际传给方法的数据。</li></ul></li><li><strong>方法体</strong>：方法体包含具体的语句，定义该方法的功能。</li></ul></li></ul><pre class="line-numbers language-java" data-language="java"><code class="language-java">修饰符 返回值类型 方法名<span class="token punctuation">(</span>参数类型 参数名<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>  <span class="token comment">//方法体</span>  <span class="token keyword">return</span> 返回值<span class="token punctuation">;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>实例：比大小</p><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>    <span class="token keyword">double</span> max <span class="token operator">=</span> <span class="token function">max</span><span class="token punctuation">(</span><span class="token number">79</span><span class="token punctuation">,</span> <span class="token number">81</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>max<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">&#125;</span><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">double</span> <span class="token function">max</span><span class="token punctuation">(</span><span class="token keyword">double</span> a<span class="token punctuation">,</span> <span class="token keyword">double</span> b<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>    <span class="token keyword">double</span> result <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>    <span class="token keyword">if</span> <span class="token punctuation">(</span>a <span class="token operator">==</span> b<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"两个值相等"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">//终止方法</span>    <span class="token punctuation">&#125;</span>    <span class="token keyword">if</span> <span class="token punctuation">(</span>a <span class="token operator">&lt;</span> b<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>        result <span class="token operator">=</span> b<span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span><span class="token keyword">else</span> <span class="token punctuation">&#123;</span>        result <span class="token operator">=</span> a<span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span>    <span class="token keyword">return</span> result<span class="token punctuation">;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="方法的重载"><a href="#方法的重载" class="headerlink" title="方法的重载"></a>方法的重载</h2>]]></content>
       
       
       <categories>
@@ -20,9 +20,9 @@
       
         <tags>
             
-            <tag> 自学笔记 </tag>
-            
             <tag> java </tag>
+            
+            <tag> 自学笔记 </tag>
             
         </tags>
       
@@ -47,9 +47,9 @@
       
         <tags>
             
-            <tag> 自学笔记 </tag>
-            
             <tag> java </tag>
+            
+            <tag> 自学笔记 </tag>
             
         </tags>
       
@@ -74,9 +74,9 @@
       
         <tags>
             
-            <tag> 自学笔记 </tag>
-            
             <tag> java </tag>
+            
+            <tag> 自学笔记 </tag>
             
         </tags>
       
@@ -101,9 +101,9 @@
       
         <tags>
             
-            <tag> 自学笔记 </tag>
-            
             <tag> java </tag>
+            
+            <tag> 自学笔记 </tag>
             
         </tags>
       
@@ -128,11 +128,11 @@
       
         <tags>
             
+            <tag> 自学笔记 </tag>
+            
             <tag> DOS </tag>
             
             <tag> Typora </tag>
-            
-            <tag> 自学笔记 </tag>
             
         </tags>
       
