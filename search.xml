@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>java学习笔记6-面向对象编程</title>
+      <link href="/2021/07/17/java-xue-xi-bi-ji-6-mian-xiang-dui-xiang-bian-cheng/"/>
+      <url>/2021/07/17/java-xue-xi-bi-ji-6-mian-xiang-dui-xiang-bian-cheng/</url>
+      
+        <content type="html"><![CDATA[<p>自用的学习笔记，若有错误欢迎指出。</p><h2 id="面向过程-amp-面向对象"><a href="#面向过程-amp-面向对象" class="headerlink" title="面向过程 &amp; 面向对象"></a>面向过程 &amp; 面向对象</h2><ul><li>面向过程思想<ul><li>步骤清晰简单</li><li>面对过程适合处理一些较为简单的问题</li></ul></li><li>面向对象思想<ul><li>物以类聚，分类的思维模式，思考问题首先会解决问题需要哪些分类，然后对这些分类进行单独思考。最后，才对某个分类下的细节进行面向过程的思索。</li><li>面向对象适合处理复杂的问题，适合处理需要多人协作的问题。</li></ul></li><li><strong>对于描述复杂的事物，为了从宏观上把握、从整体上合理分析，我们需要使用面向对象的思路来分析整个系统。但是，具体到微观操作，仍然需要面向过程的思路去处理。</strong></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 自学笔记 </tag>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>java学习笔记5-数组</title>
       <link href="/2021/07/15/java-xue-xi-bi-ji-5-shu-zu/"/>
       <url>/2021/07/15/java-xue-xi-bi-ji-5-shu-zu/</url>
@@ -20,9 +47,9 @@
       
         <tags>
             
-            <tag> java </tag>
-            
             <tag> 自学笔记 </tag>
+            
+            <tag> java </tag>
             
         </tags>
       
@@ -47,11 +74,11 @@
       
         <tags>
             
-            <tag> Nginx </tag>
-            
             <tag> Hexo </tag>
             
             <tag> Git </tag>
+            
+            <tag> Nginx </tag>
             
             <tag> Cenots </tag>
             
@@ -78,9 +105,9 @@
       
         <tags>
             
-            <tag> java </tag>
-            
             <tag> 自学笔记 </tag>
+            
+            <tag> java </tag>
             
         </tags>
       
@@ -105,9 +132,9 @@
       
         <tags>
             
-            <tag> java </tag>
-            
             <tag> 自学笔记 </tag>
+            
+            <tag> java </tag>
             
         </tags>
       
@@ -132,9 +159,9 @@
       
         <tags>
             
-            <tag> java </tag>
-            
             <tag> 自学笔记 </tag>
+            
+            <tag> java </tag>
             
         </tags>
       
@@ -159,9 +186,9 @@
       
         <tags>
             
-            <tag> java </tag>
-            
             <tag> 自学笔记 </tag>
+            
+            <tag> java </tag>
             
         </tags>
       
@@ -186,11 +213,11 @@
       
         <tags>
             
-            <tag> 自学笔记 </tag>
-            
             <tag> DOS </tag>
             
             <tag> Typora </tag>
+            
+            <tag> 自学笔记 </tag>
             
         </tags>
       
