@@ -670,14 +670,8 @@
         <div class="tag-chips center-align">
             
             
-            <a href="/tags/DOS/">
-                <span class="chip center-align waves-effect waves-light chip-default">DOS</span>
-            </a>
-            
-            
-            
-            <a href="/tags/Typora/">
-                <span class="chip center-align waves-effect waves-light chip-default">Typora</span>
+            <a href="/tags/java/">
+                <span class="chip center-align waves-effect waves-light chip-default">java</span>
             </a>
             
             
@@ -688,8 +682,14 @@
             
             
             
-            <a href="/tags/java/">
-                <span class="chip center-align waves-effect waves-light chip-default">java</span>
+            <a href="/tags/DOS/">
+                <span class="chip center-align waves-effect waves-light chip-default">DOS</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Typora/">
+                <span class="chip center-align waves-effect waves-light chip-default">Typora</span>
             </a>
             
             
@@ -902,9 +902,9 @@
                         var diff = t2 - t1;
                         var diffYears = Math.floor(diff / years);
                         var diffDays = Math.floor((diff / days) - diffYears * 365);
-                        var diffHours = Math.floor((diff / hours) - diffDays * 24);
-                        var diffMinutes = Math.floor((diff / minutes) - diffHours * 60);
-                        var diffSeconds = Math.floor((diff / seconds) - diffMinutes * 60);
+                        var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+                        var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+                        var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
 
                         // 区分是否有年份.
                         var language = 'zh-CN';
