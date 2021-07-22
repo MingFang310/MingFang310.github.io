@@ -386,14 +386,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-17
+                    2021-07-22
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    215
+                    870
                 </div>
                 
 
@@ -419,6 +419,126 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>自用的学习笔记，若有错误欢迎指出。</p>
+<h2 id="回顾方法以及加深"><a href="#回顾方法以及加深" class="headerlink" title="回顾方法以及加深"></a>回顾方法以及加深</h2><h3 id="方法的定义"><a href="#方法的定义" class="headerlink" title="方法的定义"></a>方法的定义</h3><ol>
+<li><p>修饰符</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.runoob.com/java/java-modifier-types.html">菜鸟教程-传送门</a></li>
+</ul>
+</li>
+<li><p>break和return的区别</p>
+<ul>
+<li>break：跳出switch循环，结速循环</li>
+<li>return：代表方法的结束，返回一个结果</li>
+</ul>
+</li>
+<li><p>方法名</p>
+<ul>
+<li>注意命名规范，要做到见名知意</li>
+</ul>
+</li>
+<li><p>参数列表</p>
+<ul>
+<li>参数类型</li>
+<li>参数名</li>
+</ul>
+</li>
+</ol>
+<h3 id="方法的调用"><a href="#方法的调用" class="headerlink" title="方法的调用"></a>方法的调用</h3><ol>
+<li><p>静态方法 static</p>
+<ul>
+<li><code>static</code>是和类一起加载的</li>
+</ul>
+ <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//静态方法 static</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo02</span><span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token comment">//实例化这个类 new</span>
+        <span class="token comment">//对象类型 对象名 = 变量值</span>
+        <span class="token class-name">Student</span> student <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        student<span class="token punctuation">.</span><span class="token function">say</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                
+    <span class="token punctuation">&#125;</span>    
+<span class="token punctuation">&#125;</span>
+
+
+<span class="token comment">//这里在单独新创建一个类</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Student</span><span class="token punctuation">&#123;</span>
+    <span class="token comment">//定义一个方法</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">say</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"hello"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+</li>
+<li><p>非静态方法</p>
+</li>
+</ol>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo02</span><span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token comment">//实际参数和形式参数的类型要对应</span>
+        <span class="token class-name">Demo02</span> demo02 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Demo02</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        demo02<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+            <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="java值传递"><a href="#java值传递" class="headerlink" title="java值传递"></a>java值传递</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo04</span><span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        
+        <span class="token class-name">Demo04</span><span class="token punctuation">.</span><span class="token function">change</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//输出值为：1</span>
+    <span class="token punctuation">&#125;</span>
+    
+    <span class="token comment">//返回值为空</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">change</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="Java引用传递"><a href="#Java引用传递" class="headerlink" title="Java引用传递"></a>Java引用传递</h3><p>引用传递的是对象，其本质还是值传递</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo01</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">Student</span> student <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>student<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//null</span>
+
+        <span class="token class-name">Demo01</span><span class="token punctuation">.</span><span class="token function">change</span><span class="token punctuation">(</span>student<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>student<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//Ben</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">change</span><span class="token punctuation">(</span><span class="token class-name">Student</span> student<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token comment">/*student是一个对象
+        是指向的Student student = new Student();
+        这个是一个具体的人，可以改变属性。
+        */</span>
+        student<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">"Ben"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token comment">//定义了一个Student类，有一个属性：name</span>
+<span class="token keyword">class</span> <span class="token class-name">Student</span><span class="token punctuation">&#123;</span>
+    <span class="token class-name">String</span> name<span class="token punctuation">;</span> <span class="token comment">//null</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="类与对象的关系"><a href="#类与对象的关系" class="headerlink" title="类与对象的关系"></a>类与对象的关系</h2><ul>
+<li>类似一种抽象的数据类型，它是对某一类食物整体描述/定义，但是并不能代表某一个具体的事物。<ul>
+<li>Person类、Pet类、Car类等，这些类都是用来描述/定义某一类具体的事物应该具备的特点和行为。</li>
+</ul>
+</li>
+<li>对象是抽象概念的具体实例<ul>
+<li>能够体现出特点，展现粗功能的是具体的实例，而不是一个抽象的概念。</li>
+<li>张三就是一个人的具体实例，张三家里的旺财就是狗的一个具体实例。</li>
+</ul>
+</li>
+</ul>
 <h2 id="面向过程-amp-面向对象"><a href="#面向过程-amp-面向对象" class="headerlink" title="面向过程 &amp; 面向对象"></a>面向过程 &amp; 面向对象</h2><ul>
 <li>面向过程思想<ul>
 <li>步骤清晰简单</li>
@@ -432,6 +552,19 @@
 </li>
 <li><strong>对于描述复杂的事物，为了从宏观上把握、从整体上合理分析，我们需要使用面向对象的思路来分析整个系统。但是，具体到微观操作，仍然需要面向过程的思路去处理。</strong></li>
 </ul>
+<h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><ul>
+<li>面向对象编程(Object-Oriented Programming，OOP)</li>
+<li>面向对象编程的本质就是：<strong>以类的方式组装代码，以对象的组织(封装)数据</strong></li>
+<li>抽象</li>
+<li>三大特性<ul>
+<li><strong>封装</strong></li>
+<li><strong>继承</strong></li>
+<li><strong>多态</strong></li>
+</ul>
+</li>
+</ul>
+<p>从认识论角度考虑是先有对象后有类。对象，是具体的事物。类，是抽象的，是对对象的抽象。</p>
+<p>从代码运行角度考虑是先有类后有对象。类是对象的模板。</p>
 
                 
             </div>
@@ -1013,7 +1146,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">13.7k</span>
+                        class="white-color">14.3k</span>
             
             
             
@@ -1091,6 +1224,8 @@
 
                     calcSiteTime();
                 </script>
+
+                
             
             <br>
             
