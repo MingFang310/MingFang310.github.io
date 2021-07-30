@@ -350,12 +350,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/java/">
-                                <span class="chip bg-color">java</span>
-                            </a>
-                        
                             <a href="/tags/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/">
                                 <span class="chip bg-color">自学笔记</span>
+                            </a>
+                        
+                            <a href="/tags/java/">
+                                <span class="chip bg-color">java</span>
                             </a>
                         
                     </div>
@@ -386,14 +386,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-22
+                    2021-07-30
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    870
+                    1.1k
                 </div>
                 
 
@@ -539,6 +539,15 @@
 </ul>
 </li>
 </ul>
+<h2 id="创建与初始化对象"><a href="#创建与初始化对象" class="headerlink" title="创建与初始化对象"></a>创建与初始化对象</h2><ul>
+<li>使用<code>new</code>关键字来创建对象</li>
+<li>使用<code>new</code>关键字创建的时候，除了分配内存空间之外，还会给创建好的对象进行默认的初始化以及对类中的构造器的调用。</li>
+<li>类中的构造器也称为构造方法，是在进行创建对象的时候必须要调用的。并且构造器有以下两个特点：<ul>
+<li>必须和类的名字相同</li>
+<li>必须没有返回类型，也不能写<code>void</code></li>
+</ul>
+</li>
+</ul>
 <h2 id="面向过程-amp-面向对象"><a href="#面向过程-amp-面向对象" class="headerlink" title="面向过程 &amp; 面向对象"></a>面向过程 &amp; 面向对象</h2><ul>
 <li>面向过程思想<ul>
 <li>步骤清晰简单</li>
@@ -552,6 +561,36 @@
 </li>
 <li><strong>对于描述复杂的事物，为了从宏观上把握、从整体上合理分析，我们需要使用面向对象的思路来分析整个系统。但是，具体到微观操作，仍然需要面向过程的思路去处理。</strong></li>
 </ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//一个项目应该只存在一个main方法</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Application</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token comment">//类是抽象的，需要实例化</span>
+        <span class="token comment">//类实例化后会返回一个自己的对象</span>
+        <span class="token class-name">Student</span> josh <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Student</span> tom <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//赋值</span>
+        ben<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">"josh"</span><span class="token punctuation">;</span>
+        ben<span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">23</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>ben<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//josh</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>ben<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//23</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Student</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">//属性：字段</span>
+    <span class="token class-name">String</span> name<span class="token punctuation">;</span> <span class="token comment">//null</span>
+    <span class="token keyword">int</span> age<span class="token punctuation">;</span> <span class="token comment">//0</span>
+
+    <span class="token comment">//方法</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">study</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">+</span> <span class="token string">"在学习中"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
 <h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><ul>
 <li>面向对象编程(Object-Oriented Programming，OOP)</li>
 <li>面向对象编程的本质就是：<strong>以类的方式组装代码，以对象的组织(封装)数据</strong></li>
@@ -629,12 +668,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/java/">
-                                    <span class="chip bg-color">java</span>
-                                </a>
-                            
                                 <a href="/tags/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/">
                                     <span class="chip bg-color">自学笔记</span>
+                                </a>
+                            
+                                <a href="/tags/java/">
+                                    <span class="chip bg-color">java</span>
                                 </a>
                             
                         </div>
@@ -846,12 +885,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/java/">
-                        <span class="chip bg-color">java</span>
-                    </a>
-                    
                     <a href="/tags/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/">
                         <span class="chip bg-color">自学笔记</span>
+                    </a>
+                    
+                    <a href="/tags/java/">
+                        <span class="chip bg-color">java</span>
                     </a>
                     
                 </div>
@@ -899,12 +938,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/java/">
-                        <span class="chip bg-color">java</span>
-                    </a>
-                    
                     <a href="/tags/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/">
                         <span class="chip bg-color">自学笔记</span>
+                    </a>
+                    
+                    <a href="/tags/java/">
+                        <span class="chip bg-color">java</span>
                     </a>
                     
                 </div>
@@ -1146,7 +1185,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">14.3k</span>
+                        class="white-color">14.5k</span>
             
             
             
