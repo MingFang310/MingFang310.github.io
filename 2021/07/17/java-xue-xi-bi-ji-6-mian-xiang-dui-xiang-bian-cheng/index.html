@@ -393,7 +393,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1.3k
                 </div>
                 
 
@@ -448,7 +448,9 @@
 <ul>
 <li><code>static</code>是和类一起加载的</li>
 </ul>
- <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//静态方法 static</span>
+</li>
+</ol>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//静态方法 static</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo02</span><span class="token punctuation">&#123;</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
         <span class="token comment">//实例化这个类 new</span>
@@ -468,9 +470,10 @@
     <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-</li>
-<li><p>非静态方法</p>
-</li>
+
+
+<ol>
+<li>非静态方法</li>
 </ol>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo02</span><span class="token punctuation">&#123;</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
@@ -548,19 +551,6 @@
 </ul>
 </li>
 </ul>
-<h2 id="面向过程-amp-面向对象"><a href="#面向过程-amp-面向对象" class="headerlink" title="面向过程 &amp; 面向对象"></a>面向过程 &amp; 面向对象</h2><ul>
-<li>面向过程思想<ul>
-<li>步骤清晰简单</li>
-<li>面对过程适合处理一些较为简单的问题</li>
-</ul>
-</li>
-<li>面向对象思想<ul>
-<li>物以类聚，分类的思维模式，思考问题首先会解决问题需要哪些分类，然后对这些分类进行单独思考。最后，才对某个分类下的细节进行面向过程的思索。</li>
-<li>面向对象适合处理复杂的问题，适合处理需要多人协作的问题。</li>
-</ul>
-</li>
-<li><strong>对于描述复杂的事物，为了从宏观上把握、从整体上合理分析，我们需要使用面向对象的思路来分析整个系统。但是，具体到微观操作，仍然需要面向过程的思路去处理。</strong></li>
-</ul>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//一个项目应该只存在一个main方法</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Application</span> <span class="token punctuation">&#123;</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
@@ -591,6 +581,66 @@
 
 
 
+<h3 id="构造器"><a href="#构造器" class="headerlink" title="构造器"></a>构造器</h3><ul>
+<li>使用<code>new</code>关键字，必须要有构造器。其本质是在调用构造器。</li>
+<li>有参构造：一旦定义了有参构造，无参就必须显示定义</li>
+<li>构造器的定义：<ul>
+<li>和类名字相同</li>
+<li>没有返回值</li>
+</ul>
+</li>
+<li>构造器的作用：<ul>
+<li><code>new</code>本质在调用构造器</li>
+<li>初始化对象的值</li>
+</ul>
+</li>
+<li>注意：<ul>
+<li>定义了有参构造器，如果想使用无参构造，需要去定义一个无参数的构造器</li>
+</ul>
+</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Application</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+
+        <span class="token comment">//new 实例化一个对象</span>
+        <span class="token class-name">Person</span> person <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>person<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//josh</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Person</span> <span class="token punctuation">&#123;</span>
+
+    <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+    
+    <span class="token comment">//这是一个无参构造器</span>
+    <span class="token keyword">public</span> <span class="token class-name">Person</span>（）<span class="token punctuation">&#123;</span>
+        
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token comment">//实例化初始值</span>
+    <span class="token keyword">public</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">"josh"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token comment">//idea：alt + insert可以自动生成构造器</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="面向过程-amp-面向对象"><a href="#面向过程-amp-面向对象" class="headerlink" title="面向过程 &amp; 面向对象"></a>面向过程 &amp; 面向对象</h2><ul>
+<li>面向过程思想<ul>
+<li>步骤清晰简单</li>
+<li>面对过程适合处理一些较为简单的问题</li>
+</ul>
+</li>
+<li>面向对象思想<ul>
+<li>物以类聚，分类的思维模式，思考问题首先会解决问题需要哪些分类，然后对这些分类进行单独思考。最后，才对某个分类下的细节进行面向过程的思索。</li>
+<li>面向对象适合处理复杂的问题，适合处理需要多人协作的问题。</li>
+</ul>
+</li>
+<li><strong>对于描述复杂的事物，为了从宏观上把握、从整体上合理分析，我们需要使用面向对象的思路来分析整个系统。但是，具体到微观操作，仍然需要面向过程的思路去处理。</strong></li>
+</ul>
 <h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><ul>
 <li>面向对象编程(Object-Oriented Programming，OOP)</li>
 <li>面向对象编程的本质就是：<strong>以类的方式组装代码，以对象的组织(封装)数据</strong></li>
@@ -1185,7 +1235,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">14.5k</span>
+                        class="white-color">14.7k</span>
             
             
             
