@@ -350,16 +350,16 @@
                     
                     <div class="article-tag">
                         
+                            <a href="/tags/Nginx/">
+                                <span class="chip bg-color">Nginx</span>
+                            </a>
+                        
                             <a href="/tags/Hexo/">
                                 <span class="chip bg-color">Hexo</span>
                             </a>
                         
                             <a href="/tags/Git/">
                                 <span class="chip bg-color">Git</span>
-                            </a>
-                        
-                            <a href="/tags/Nginx/">
-                                <span class="chip bg-color">Nginx</span>
                             </a>
                         
                             <a href="/tags/Cenots/">
@@ -401,7 +401,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.2k
+                    2.3k
                 </div>
                 
 
@@ -453,21 +453,21 @@
 <h3 id="云服务器配置Git"><a href="#云服务器配置Git" class="headerlink" title="云服务器配置Git"></a>云服务器配置Git</h3><ol>
 <li>安装依赖库</li>
 </ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">yum <span class="token function">install</span> curl-devel expat-devel gettext-devel openssl-devel zlib-devel <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
 <ol start="2">
 <li>安装编译工具</li>
 </ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">yum <span class="token function">install</span> gcc perl-ExtUtils-MakeMaker package<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">yum install gcc perl-ExtUtils-MakeMaker package<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
 <ol start="3">
 <li>使用<code>git --version</code>来查看当前服务器的git版本</li>
 </ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> --version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">git --version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
@@ -476,67 +476,67 @@
 <ol start="4">
 <li>删除当前git</li>
 </ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">yum remove <span class="token function">git</span> -y<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">yum remove git -y<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
 <ol start="5">
 <li>下载最新的git版本</li>
 </ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#下载的目录</span>
-<span class="token builtin class-name">cd</span> /usr/local/src
-<span class="token comment">#去git官网上查看最新的git版本(我这里是2.32.0)</span>
-<span class="token function">wget</span> https://www.kernel.org/pub/software/scm/git/git-2.32.0.tar.gz
-<span class="token comment">#解压到当前文件夹</span>
-<span class="token function">tar</span> -zxvf git-2.32.0.tar.gz<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">#下载的目录
+cd &#x2F;usr&#x2F;local&#x2F;src
+#去git官网上查看最新的git版本(我这里是2.32.0)
+wget https:&#x2F;&#x2F;www.kernel.org&#x2F;pub&#x2F;software&#x2F;scm&#x2F;git&#x2F;git-2.32.0.tar.gz
+#解压到当前文件夹
+tar -zxvf git-2.32.0.tar.gz<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <ol start="6">
 <li>编辑并安装git</li>
 </ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#进入到git文件夹(记得git的版本不要输错)</span>
-<span class="token builtin class-name">cd</span> git-2.32.0
-<span class="token comment">#编译源码(编译的时间有点长耐心等待)</span>
-<span class="token function">make</span> <span class="token assign-left variable">prefix</span><span class="token operator">=</span>/usr/local/git all
-<span class="token comment">#安装路径</span>
-<span class="token function">make</span> <span class="token assign-left variable">prefix</span><span class="token operator">=</span>/usr/local/git <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">#进入到git文件夹(记得git的版本不要输错)
+cd git-2.32.0
+#编译源码(编译的时间有点长耐心等待)
+make prefix&#x3D;&#x2F;usr&#x2F;local&#x2F;git all
+#安装路径
+make prefix&#x3D;&#x2F;usr&#x2F;local&#x2F;git install<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <ol start="7">
 <li>配置git的环境变量</li>
 </ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">echo</span> <span class="token string">'export PATH=$PATH:/usr/local/git/bin'</span> <span class="token operator">>></span> /etc/bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">echo &#39;export PATH&#x3D;$PATH:&#x2F;usr&#x2F;local&#x2F;git&#x2F;bin&#39; &gt;&gt; &#x2F;etc&#x2F;bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
 <ol start="8">
 <li>刷新环境变量</li>
 </ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">source</span> /etc/bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">source &#x2F;etc&#x2F;bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
 <ol start="9">
 <li>再次查看版本号</li>
 </ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> --version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">git --version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
 <ol start="10">
 <li>创建git用户并且修改权限</li>
 </ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#输入自己的用户名</span>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">#输入自己的用户名
 adduser yourName
-<span class="token comment">#这边的密码是初始密码</span>
-<span class="token comment">##后面可以修改建议写自己的用户名方便记忆</span>
+#这边的密码是初始密码
+##后面可以修改建议写自己的用户名方便记忆
 passed yourName
-<span class="token comment">#修改权限</span>
-<span class="token function">chmod</span> <span class="token number">740</span> /etc/sudoers
-<span class="token comment">#进入到文件进行修改</span>
-<span class="token function">vim</span> /etc/sudoers<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+#修改权限
+chmod 740 &#x2F;etc&#x2F;sudoers
+#进入到文件进行修改
+vim &#x2F;etc&#x2F;sudoers<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
@@ -560,75 +560,75 @@ passed yourName
 <h3 id="本地创建密钥"><a href="#本地创建密钥" class="headerlink" title="本地创建密钥"></a>本地创建密钥</h3><ol>
 <li>首先我们先查看自己是否拥有密钥</li>
 </ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ls</span> -al ~/.ssh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ls -al ~&#x2F;.ssh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
 <ol start="2">
 <li>如果输出的是<code>No such file or directory</code>，证明我们电脑没有安装密钥</li>
 </ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#生成新的ssh密钥</span>
-<span class="token comment">##在这里的you_email填写你的GitHub的注册邮箱</span>
-<span class="token comment">##之后就是全按回车确认就行</span>
-<span class="token comment">###提示的要你填写密码可以填写，但是一定要记住！</span>
-ssh-keygen -t rsa -C<span class="token string">"you_email"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">#生成新的ssh密钥
+##在这里的you_email填写你的GitHub的注册邮箱
+##之后就是全按回车确认就行
+###提示的要你填写密码可以填写，但是一定要记住！
+ssh-keygen -t rsa -C&quot;you_email&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <ol start="3">
 <li>生成并且添加ssh密钥</li>
 </ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ssh-add ~/.ssh/id_rsa<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ssh-add ~&#x2F;.ssh&#x2F;id_rsa<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
 <ol start="4">
 <li>查看你的ssh密钥</li>
 </ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#这里我们需要使用的是我们的密钥</span>
-<span class="token function">cat</span> ~/.ssh/id_rsa<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">#这里我们需要使用的是我们的密钥
+cat ~&#x2F;.ssh&#x2F;id_rsa<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>当我们输入完上面的代码后，终端就会出现我们的密钥。</p>
 <p>使用windows系统的同学，直接在系统根目录去寻找<code>.ssh</code>文件夹就好。</p>
 <ol start="5">
 <li>将本地创建的密钥<code>id_rsa</code>进行复制到腾讯云服务器上</li>
 </ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#这个操作是在腾讯云上</span>
-<span class="token function">su</span> yourName
-<span class="token comment">#创建一个存储你密钥的目录</span>
-<span class="token function">mkdir</span> ~/.ssh
-<span class="token comment">#对该文件进行编辑</span>
-<span class="token comment">##在该文件中，直接复制你之前得到的密钥</span>
-<span class="token function">vim</span> ~/.ssh/authorized_keys<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">#这个操作是在腾讯云上
+su yourName
+#创建一个存储你密钥的目录
+mkdir ~&#x2F;.ssh
+#对该文件进行编辑
+##在该文件中，直接复制你之前得到的密钥
+vim ~&#x2F;.ssh&#x2F;authorized_keys<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <ol start="6">
 <li>进行本地测试</li>
 </ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ssh</span> -v fuchen@服务器ip<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ssh -v fuchen@服务器ip<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>测试通过的话，就会发现你在本地也可以联入到腾讯云。</p>
 <h2 id="云服务器网站配置"><a href="#云服务器网站配置" class="headerlink" title="云服务器网站配置"></a>云服务器网站配置</h2><ol>
 <li>创建网站目录并且设置权限</li>
 </ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#进入到root用户</span>
-<span class="token function">su</span> root
-<span class="token comment">#创建网站目录</span>
-<span class="token function">mkdir</span> /home/hexo
-<span class="token comment">#设置权限</span>
-<span class="token comment">##将yourName替换成自己的用户名</span>
-<span class="token function">chown</span> yourName:yourName -R /home/hexo<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">#进入到root用户
+su root
+#创建网站目录
+mkdir &#x2F;home&#x2F;hexo
+#设置权限
+##将yourName替换成自己的用户名
+chown yourName:yourName -R &#x2F;home&#x2F;hexo<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <ol start="2">
 <li>安装<code>Nginx</code></li>
 </ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#下载Nginx</span>
-yum <span class="token function">install</span> -y nginx
-<span class="token comment">#启动服务器</span>
-<span class="token comment">##如果没有报错就证明配置成功</span>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">#下载Nginx
+yum install -y nginx
+#启动服务器
+##如果没有报错就证明配置成功
 systemctl start nginx.service<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
@@ -636,18 +636,18 @@ systemctl start nginx.service<span aria-hidden="true" class="line-numbers-rows">
 <ol start="3">
 <li>修改Nginx配置文件</li>
 </ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#修改Nginx配置文件</span>
-<span class="token function">vim</span> /etc/nginx/nginx.conf<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">#修改Nginx配置文件
+vim &#x2F;etc&#x2F;nginx&#x2F;nginx.conf<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 
 
 <p>我们需要修改<code>server_name</code>和<code>root</code>两处</p>
 <p><img src="/2021/07/14/jiang-hexo-bo-ke-bu-shu-dao-teng-xun-yun/%E4%BF%AE%E6%94%B9Nginx%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.png" alt="修改Nginx配置文件"></p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token number">57</span>     server <span class="token punctuation">&#123;</span>
-<span class="token number">58</span> <span class="token comment">#       listen       443 ssl;</span>
-<span class="token number">59</span> <span class="token comment">#       listen       [::]:443 ssl http2;</span>
-<span class="token number">60</span>         server_name  shadowprism.cn<span class="token punctuation">;</span> <span class="token comment">#这里填写你的域名</span>
-<span class="token number">61</span>         root         /home/hexo/<span class="token punctuation">;</span> <span class="token comment">#网站目录</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">57     server &#123;
+58 #       listen       443 ssl;
+59 #       listen       [::]:443 ssl http2;
+60         server_name  shadowprism.cn; #这里填写你的域名
+61         root         &#x2F;home&#x2F;hexo&#x2F;; #网站目录<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>然后在<code>wq!</code>保存并且退出编辑。</p>
 <p><strong>注意：在这里填写的域名一定要是在腾讯云里进行解析过的域名。</strong></p>
@@ -662,35 +662,35 @@ systemctl start nginx.service<span aria-hidden="true" class="line-numbers-rows">
 <ol start="5">
 <li>建立git仓库</li>
 </ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#切换为root用户</span>
-<span class="token function">su</span> root
-<span class="token comment">#定位到你的用户目录下</span>
-<span class="token builtin class-name">cd</span> /home/yournName
-<span class="token comment">#将git部署到该目录下</span>
-<span class="token function">git</span> init --bare blog.git
-<span class="token comment">#设置权限</span>
-<span class="token function">chown</span> yourName:yourName -R blog.git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">#切换为root用户
+su root
+#定位到你的用户目录下
+cd &#x2F;home&#x2F;yournName
+#将git部署到该目录下
+git init --bare blog.git
+#设置权限
+chown yourName:yourName -R blog.git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <ol start="6">
 <li>同步网站根目录</li>
 </ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#修改改目录下的文件</span>
-<span class="token function">vim</span> blog.git/hooks/post-receive
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">#修改改目录下的文件
+vim blog.git&#x2F;hooks&#x2F;post-receive
 
-<span class="token comment">#将下面这2行代码复制到该文件中</span>
-<span class="token comment">##将yourName替换为你的用户名</span>
-<span class="token comment">#!/bin/sh</span>
-<span class="token function">git</span> --work-tree<span class="token operator">=</span>/home/hexo --git-dir<span class="token operator">=</span>/home/yourName/blog.git checkout -f<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+#将下面这2行代码复制到该文件中
+##将yourName替换为你的用户名
+#!&#x2F;bin&#x2F;sh
+git --work-tree&#x3D;&#x2F;home&#x2F;hexo --git-dir&#x3D;&#x2F;home&#x2F;yourName&#x2F;blog.git checkout -f<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <ol start="7">
 <li>修改权限</li>
 </ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">##将yourName替换为你的用户名</span>
-<span class="token function">chmod</span> +x /home/yourName/blog.git/hooks/post-receive<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">##将yourName替换为你的用户名
+chmod +x &#x2F;home&#x2F;yourName&#x2F;blog.git&#x2F;hooks&#x2F;post-receive<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 
 
@@ -698,14 +698,14 @@ systemctl start nginx.service<span aria-hidden="true" class="line-numbers-rows">
 <li>在本地hexo目录修改_config.yml文件</li>
 </ol>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">deploy:
-  type: <span class="token function">git</span>
-  repo: yourName@你的IP地址:/home/yourName/blog.git
+  type: git
+  repo: yourName@你的IP地址:&#x2F;home&#x2F;yourName&#x2F;blog.git
   branch: master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <h2 id="在本地终端部署"><a href="#在本地终端部署" class="headerlink" title="在本地终端部署"></a>在本地终端部署</h2><p>终于到了最后一步，最后我们只需要向部署到GitHub上一样使用命令行即可完成。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo cl <span class="token operator">&amp;&amp;</span> hexo g <span class="token operator">&amp;&amp;</span> hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo cl &amp;&amp; hexo g &amp;&amp; hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
@@ -715,14 +715,14 @@ systemctl start nginx.service<span aria-hidden="true" class="line-numbers-rows">
 <h2 id="安装SSL证书"><a href="#安装SSL证书" class="headerlink" title="安装SSL证书"></a>安装SSL证书</h2><ol>
 <li>进入腾讯云操作页面，安装<code>vsftpd</code></li>
 </ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">yum <span class="token function">install</span> -y vsftpd<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">yum install -y vsftpd<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
 <p>2.修改配置文件</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">vim</span> /etc/vsftpd/vsftpd.conf
-<span class="token comment">#禁止匿名用户登录</span>
-<span class="token assign-left variable">anonymous_enable</span><span class="token operator">=</span>No<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">vim &#x2F;etc&#x2F;vsftpd&#x2F;vsftpd.conf
+#禁止匿名用户登录
+anonymous_enable&#x3D;No<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="/2021/07/14/jiang-hexo-bo-ke-bu-shu-dao-teng-xun-yun/%E4%BF%AE%E6%94%B9anonymous.png" alt="修改anonymous"></p>
 <ol start="3">
@@ -750,58 +750,58 @@ systemctl start nginx.service<span aria-hidden="true" class="line-numbers-rows">
 <ol start="2">
 <li>我们上传的SSL文件默认上传至我们的用户文件夹下</li>
 </ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> /home/yourName
-<span class="token comment">#查看文件</span>
-<span class="token function">ls</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cd &#x2F;home&#x2F;yourName
+#查看文件
+ls<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 
 
 <ol start="3">
 <li>解压缩文件</li>
 </ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">unzip</span> ~.zip<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">unzip ~.zip<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>解压完成后，会在我们的文件夹下生成 <code>Nginx</code> <code>Apache</code> <code>IIS</code> <code>Tomcat</code> 文件夹 我们只需要用Nginx</p>
 <ol start="4">
 <li>将Nginx文件夹下的文件复制到新建的文件夹下</li>
 </ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#先创建ssl文件夹</span>
-<span class="token function">mkdir</span> /etc/nginx/ssl/
-<span class="token comment">#进入到Nginx文件夹中</span>
-<span class="token comment">##我们用ls发现会有2个文件</span>
-<span class="token builtin class-name">cd</span> /home/fuchen/Nginx
-<span class="token comment">#复制2个文件到'/etc/nginx/ssl'目录下</span>
-<span class="token function">cp</span> 文件名.crt /etc/nginx/ssl/
-<span class="token function">cp</span> 文件名.key /etc/nginx/ssl/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">#先创建ssl文件夹
+mkdir &#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;
+#进入到Nginx文件夹中
+##我们用ls发现会有2个文件
+cd &#x2F;home&#x2F;fuchen&#x2F;Nginx
+#复制2个文件到&#39;&#x2F;etc&#x2F;nginx&#x2F;ssl&#39;目录下
+cp 文件名.crt &#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;
+cp 文件名.key &#x2F;etc&#x2F;nginx&#x2F;ssl&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <p>5.打开nginx.conf 文件夹 修改配置文件</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">vim</span> /etc/nginx/nginx.conf<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">vim &#x2F;etc&#x2F;nginx&#x2F;nginx.conf<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
 <p>同时我们还需要对文件进行修改：</p>
-<pre class="line-numbers language-nginx" data-language="nginx"><code class="language-nginx"><span class="token directive"><span class="token keyword">server</span></span> <span class="token punctuation">&#123;</span>
-    <span class="token directive"><span class="token keyword">listen</span> <span class="token number">443</span> ssl</span><span class="token punctuation">;</span>
-    <span class="token directive"><span class="token keyword">ssl</span> <span class="token boolean">on</span></span><span class="token punctuation">;</span>
-    <span class="token directive"><span class="token keyword">server_name</span>  你的域名.cn</span><span class="token punctuation">;</span>    <span class="token comment">#域名</span>
-    <span class="token directive"><span class="token keyword">root</span>         /home/hexo</span><span class="token punctuation">;</span>        <span class="token comment">#网站主目录</span>
-    <span class="token directive"><span class="token keyword">ssl_certificate</span> /etc/ssl/1_shadowprism.cn_bundle.crt</span><span class="token punctuation">;</span> <span class="token comment">#crt文件路径</span>
-    <span class="token directive"><span class="token keyword">ssl_certificate_key</span> /etc/ssl/2_shadowprism.cn.key</span><span class="token punctuation">;</span> <span class="token comment">#key文件路径</span>
-    <span class="token directive"><span class="token keyword">ssl_session_cache</span> shared:SSL:1m</span><span class="token punctuation">;</span>
-    <span class="token directive"><span class="token keyword">ssl_session_timeout</span>  <span class="token number">10m</span></span><span class="token punctuation">;</span>
-    <span class="token directive"><span class="token keyword">ssl_ciphers</span> HIGH:!aNULL:!MD5</span><span class="token punctuation">;</span>
-    <span class="token directive"><span class="token keyword">ssl_prefer_server_ciphers</span> <span class="token boolean">on</span></span><span class="token punctuation">;</span>
+<pre class="line-numbers language-nginx" data-language="nginx"><code class="language-nginx">server &#123;
+    listen 443 ssl;
+    ssl on;
+    server_name  你的域名.cn;    #域名
+    root         &#x2F;home&#x2F;hexo;        #网站主目录
+    ssl_certificate &#x2F;etc&#x2F;ssl&#x2F;1_shadowprism.cn_bundle.crt; #crt文件路径
+    ssl_certificate_key &#x2F;etc&#x2F;ssl&#x2F;2_shadowprism.cn.key; #key文件路径
+    ssl_session_cache shared:SSL:1m;
+    ssl_session_timeout  10m;
+    ssl_ciphers HIGH:!aNULL:!MD5;
+    ssl_prefer_server_ciphers on;
     
-     <span class="token comment">#默认请求</span>
-    <span class="token directive"><span class="token keyword">location</span> /</span> <span class="token punctuation">&#123;</span>
-        <span class="token directive"><span class="token keyword">root</span> /home/hexo</span><span class="token punctuation">;</span>
-        <span class="token comment">#定义首页索引文件名称</span>
-        <span class="token directive"><span class="token keyword">index</span> index.html</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+     #默认请求
+    location &#x2F; &#123;
+        root &#x2F;home&#x2F;hexo;
+        #定义首页索引文件名称
+        index index.html;
+    &#125;
+&#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>修改的内容：</p>
 <p><img src="/2021/07/14/jiang-hexo-bo-ke-bu-shu-dao-teng-xun-yun/%E4%BF%AE%E6%94%B9nginx%E6%96%87%E4%BB%B6.png" alt="修改nginx文件"></p>
@@ -809,7 +809,7 @@ systemctl start nginx.service<span aria-hidden="true" class="line-numbers-rows">
 <li>查看是否有报错，无报错重启服务器</li>
 </ol>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">nginx -t
-<span class="token comment">#如果没有报错的话，就重启服务器</span>
+#如果没有报错的话，就重启服务器
 systemctl restart nginx<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 
@@ -844,7 +844,7 @@ systemctl restart nginx<span aria-hidden="true" class="line-numbers-rows"><span>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://shadowprism.cn/2021/07/14/jiang-hexo-bo-ke-bu-shu-dao-teng-xun-yun/">https://shadowprism.cn/2021/07/14/jiang-hexo-bo-ke-bu-shu-dao-teng-xun-yun/</a>
+                    <a href="https://mingfang310.github.io/2021/07/14/jiang-hexo-bo-ke-bu-shu-dao-teng-xun-yun/">https://mingfang310.github.io/2021/07/14/jiang-hexo-bo-ke-bu-shu-dao-teng-xun-yun/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -882,16 +882,16 @@ systemctl restart nginx<span aria-hidden="true" class="line-numbers-rows"><span>
                     
                         <div class="article-tag">
                             
+                                <a href="/tags/Nginx/">
+                                    <span class="chip bg-color">Nginx</span>
+                                </a>
+                            
                                 <a href="/tags/Hexo/">
                                     <span class="chip bg-color">Hexo</span>
                                 </a>
                             
                                 <a href="/tags/Git/">
                                     <span class="chip bg-color">Git</span>
-                                </a>
-                            
-                                <a href="/tags/Nginx/">
-                                    <span class="chip bg-color">Nginx</span>
                                 </a>
                             
                                 <a href="/tags/Cenots/">
@@ -1405,7 +1405,7 @@ systemctl restart nginx<span aria-hidden="true" class="line-numbers-rows"><span>
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">21k</span>
+                        class="white-color">22.4k</span>
             
             
             
@@ -1702,8 +1702,8 @@ $(function () {
             document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
         }
         </script>
-         -->
+         --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 
 </html>
