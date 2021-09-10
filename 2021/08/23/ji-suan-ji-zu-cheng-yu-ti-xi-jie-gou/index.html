@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="个人博客的搭建以及学习历程, Java">
+    <meta name="keywords" content="计算机组成与体系结构, Java">
     <meta name="description" content="可能有你感兴趣的东西~">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>个人博客的搭建以及学习历程 | 光影N棱镜Blog</title>
+    <title>计算机组成与体系结构 | 光影N棱镜Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -225,12 +225,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">个人博客的搭建以及学习历程</h1>
+                    <h1 class="description center-align post-title">计算机组成与体系结构</h1>
                 </div>
             </div>
         </div>
@@ -350,20 +350,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Typora/">
-                                <span class="chip bg-color">Typora</span>
+                            <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/">
+                                <span class="chip bg-color">软件开发</span>
                             </a>
                         
-                            <a href="/tags/Hexo/">
-                                <span class="chip bg-color">Hexo</span>
+                            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/">
+                                <span class="chip bg-color">计算机组成</span>
                             </a>
                         
-                            <a href="/tags/Git/">
-                                <span class="chip bg-color">Git</span>
-                            </a>
-                        
-                            <a href="/tags/GitHub/">
-                                <span class="chip bg-color">GitHub</span>
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA/">
+                                <span class="chip bg-color">数据的表示</span>
                             </a>
                         
                     </div>
@@ -374,8 +370,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                前端
+                            <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/" class="post-category">
+                                软件开发
                             </a>
                         
                     </div>
@@ -387,21 +383,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-05
+                    2021-08-23
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-11
+                    2021-09-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    2.7k
                 </div>
                 
 
@@ -426,168 +422,297 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>温故而知新，可以为师矣。</p>
-<p>对我来说，搭建自己的个人博客不仅仅是为了自己的兴趣爱好。同时，写博客也可以很好的记录下自己成长的每一个脚印。我们往往在一路再向前赶路，却忘了放慢脚步。放慢脚步来反思自己的不足，明白自己为何跌倒。这样我们才可以走得更远。</p>
-<h2 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h2><p>这一次我们搭建的博客是需要使用：</p>
+                <p>自用的学习笔记，若有错误欢迎指出。</p>
+<h2 id="数据的表示【4】"><a href="#数据的表示【4】" class="headerlink" title="数据的表示【4】"></a>数据的表示【4】</h2><h3 id="进制的转换"><a href="#进制的转换" class="headerlink" title="进制的转换"></a>进制的转换</h3><h4 id="按权展开法"><a href="#按权展开法" class="headerlink" title="按权展开法"></a>按权展开法</h4><p>R进制转十进制使用<strong>按权展开法</strong>，其具体操作方式为:将R进制数的每一位数值用$R^K$形式表示，即幂的底数是R,指数为k,k与该位和小数点之间的距离有关。当该位位于小数点左边，k值是该位和小数点之间数码的个数，而当该位位于小数点右边，k值是负值,其绝对值是该位和小数点之间数码的个数加1。</p>
+<p>例如<strong>二进制</strong>：$10100.01 = 1 * 2^4 + 1 * 2^2 + 1 * 2^{-2}$</p>
+<p>例如<strong>七进制</strong>：$604.01 = 6 * 7^2 + 4 * 7^0 + 1 * 7^{-2}$</p>
+<p>二进制：0-1</p>
+<p>十进制：0-9</p>
+<p>十六进制：0-9，A-F（16进制数以大写’H’开头）</p>
+<h4 id="短除法"><a href="#短除法" class="headerlink" title="短除法"></a>短除法</h4><p>十进制转R进制使用<strong>短除法</strong>，也称为<strong>除基取余法</strong>。</p>
+<p><img src="/2021/08/23/ji-suan-ji-zu-cheng-yu-ti-xi-jie-gou/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2-%E7%9F%AD%E9%99%A4%E6%B3%95.png" alt="进制转换-短除法"></p>
+<p><img src="/2021/08/23/ji-suan-ji-zu-cheng-yu-ti-xi-jie-gou/%E7%9F%AD%E9%99%A4%E6%B3%95%E5%AE%9E%E4%BE%8B2.png" alt="短除法实例2"></p>
+<p>将二进制转为<strong>八进制</strong>和<strong>十六进制</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#二进制转八进制</span>
+<span class="token comment">##将二进制数从右往左分成每3个数码一组</span>
+<span class="token number">10</span> 001 <span class="token number">110</span>
+<span class="token comment">#转换</span>
+<span class="token number">2</span>   <span class="token number">1</span>   <span class="token number">6</span>
+
+<span class="token comment">#二进制转十六进制</span>
+<span class="token comment">##将二进制数从右往左分成每4个数码一组</span>
+<span class="token number">1000</span> <span class="token number">1110</span>
+<span class="token comment">#转换</span>
+  <span class="token number">8</span>   E<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>注意：十六进制的1-15的表示方法</p>
+<p><img src="/2021/08/23/ji-suan-ji-zu-cheng-yu-ti-xi-jie-gou/1-15%E7%9A%84%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA.png" alt="1-15的十六进制表示"></p>
+<h3 id="原码、反码、补码、移码"><a href="#原码、反码、补码、移码" class="headerlink" title="原码、反码、补码、移码"></a>原码、反码、补码、移码</h3><p><img src="/2021/08/23/ji-suan-ji-zu-cheng-yu-ti-xi-jie-gou/%E5%8E%9F%E7%A0%81%E5%8F%8D%E7%A0%81%E8%A1%A5%E7%A0%81%E7%A7%BB%E7%A0%81.png" alt="原码反码补码移码"></p>
 <ul>
-<li>Git</li>
-<li>Hexo</li>
-<li>Node.js</li>
+<li>原码：符号位表示正负，<code>0</code>表示<code>+</code>，<code>1</code>表示<code>-</code>。</li>
+<li>反码：正数的反码和原码相同，负数按照各个<strong>数据位</strong>取反。</li>
+<li>补码：正数的补码和原码相同，负数的补码按照其反码的基础上<code>+1</code>。</li>
+<li>移码：在补码的基础上在<strong>符号位（首位）</strong>上取反。</li>
 </ul>
-<h3 id="下载并安装Node-js"><a href="#下载并安装Node-js" class="headerlink" title="下载并安装Node.js"></a>下载并安装Node.js</h3><p>其中，我们需要在Node.js的官网上面下载Node.js的安装包。</p>
-<p><img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/Node.js_phase01.png" alt="Node.js_phase01"></p>
-<p>一般我们选择正式版，正式版还是最稳定的版本。(使用最新版本可能会与教程的步骤有所出入)</p>
-<p>一般在安装过程中点击next键按照默认的设置来就行。安装路径按照自己喜好来就行。</p>
-<p>使用cmd面板来测试Node.js是否有安装成功。使用win键+R键来呼出cmd面板。输入node -v命令行来查看我们所安装的node的版本。出现版本号就证明我们已经安装好了。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">node -v <span class="token comment">#查看node版本</span>
-<span class="token function">npm</span> -v <span class="token comment">#查看npm版本</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/cmd_node -v&npm -v.png" alt="cmd_node -v&npm -v" style="zoom:80%;">
-
-
-
-
-
-<p>由于我们国内有墙*<del>你懂的</del>*,导致一些镜像源上下载的很慢。所以，我们还需要来利用npm来安装cnpm。这样可以加快下载速度。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g cnpm --registry<span class="token operator">=</span>http://registry.npm.taobao.org <span class="token comment">#安装淘宝的cnpm 管理器</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>耐心的等待之后就可以下载完成。</p>
-<img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/cmd_hexo_deployer_git.png" alt="cmd_hexo_deployer_git" style="zoom:80%;">
-
-<p>当我们输入cnpm后，出现反馈就说明我们的cnpm也已经安装好了。</p>
-<img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/cmd_cnpm_check.png" alt="cmd_cnpm_check" style="zoom:80%;">
-
-
-
-
-
-<h3 id="安装Hexo框架"><a href="#安装Hexo框架" class="headerlink" title="安装Hexo框架"></a>安装Hexo框架</h3><p>我们终于可以下载并且安装Hexo框架了。</p>
-<p>在控制台输入代码：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cnpm <span class="token function">install</span> -g hexo-cli <span class="token comment">#安装hexo框架</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/cmd_hexo_download.png" alt="cmd_hexo_download" style="zoom:80%;">
-
-
-
-<p>输入代码hexo -v来查看安装的hexo框架版本。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo -v <span class="token comment">#查看hexo版本</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/cmd_hexo_v.png" alt="cmd_hexo_v" style="zoom:80%;">
-
-
-
-<p>使用代码mkdir blog来创建blog目录</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">mkdir</span> blog <span class="token comment">#创建blog目录</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/cmd_mkdir_blog.png" alt="cmd_mkdir_blog" style="zoom:80%;">
-
-
-
-<p>如图所示，我们已经在目录下成功创建了一个blog文件夹。</p>
-<img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/pc_mkdir_blog.png" alt="pc_mkdir_blog" style="zoom: 67%;">
-
-
-
-<p>这里我不想把我的博客文件装在C盘，我把文件装在F盘</p>
-<p>具体指令需要查看cmd的常用指令集合。<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_33862644/article/details/81171521">点击这里查看</a></p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> /d F:study <span class="token comment">#跳转到其他硬盘的其他文件夹</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/cmd_cd.png" alt="cmd_cd" style="zoom:80%;">
-
-
-
-<p>使用cd blog来进入blog的根目录</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> blog <span class="token comment">#进入blog目录</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/cmd_cd_blog.png" alt="cmd_cd_blog" style="zoom:80%;">
-
-
-
-<h2 id="初始化博客"><a href="#初始化博客" class="headerlink" title="初始化博客"></a>初始化博客</h2><p>使用hexo init生成博客 初始化博客</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo init <span class="token comment">#生成博客 初始化博客</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/cmd_hexo_init.png" alt="cmd_hexo_init" style="zoom:80%;">
-
-
-
-<p>随后我们就可以使用hexo s来启动博客的本地服务器，来正式的查看我们的网页了。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo s <span class="token comment">#启动本地博客服务</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/cmd_hexo_s.png" alt="cmd_hexo_s" style="zoom:80%;">
-
-<p>随后在网页上输入网页链接 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> 来查看我们的博客网页。</p>
-<p>如图所示，我们已经有了基本自带样式的博客网页，我们所做的从搭建环境到初始化博客已经全部做完了。接下来，就是开始创建新的博客内容以及将我们的博客托管到GitHub网页上。</p>
-<img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/web_hexo_blogpage.png" alt="web_hexo_blogpage" style="zoom:80%;">
-
-
-
-<h2 id="创建新的博客内容"><a href="#创建新的博客内容" class="headerlink" title="创建新的博客内容"></a>创建新的博客内容</h2><p>既然有了博客的基本框架，那么我就该把我们所想要分享的内容放到博客网页上去。具体的步骤如下：</p>
-<p>使用命令行hexo n“这是博客文章名字”来创建新的博客内容。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo n <span class="token string">"这是博客文章名字"</span> <span class="token comment">#创建新的文章 </span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/cmd_hexo_n.png" alt="cmd_hexo_n" style="zoom:80%;">
-
-
-
-
-
-<p>接下来我们就可以使用文本编辑工具Markdown来编辑我们的博文。这里我也推荐给大家一款很好用的软件<a target="_blank" rel="noopener" href="https://www.typora.io/">Typora</a>.</p>
-<p>待我们编辑完博文之后，我们就该将新的博文发布我们的网页里面。</p>
-<p>先清理一下，然后再生成博文。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo c <span class="token comment">#清理一下hexo g #生成</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/cmd_hexo_g.png" alt="cmd_hexo_g" style="zoom:80%;">
-
-
-
-
-
-<h2 id="将博客部署到GitHub上"><a href="#将博客部署到GitHub上" class="headerlink" title="将博客部署到GitHub上"></a>将博客部署到GitHub上</h2><p>我们的博客不可能只能在本地localhost上查看，我们需要将我们所想分享的东西放到网上去，让更多的人所了解。</p>
-<p>首先我们要先登录到<a target="_blank" rel="noopener" href="https://github.com/">GitHub</a>上。</p>
-<p>登录之后我们点击”Your repositories”，在选择新建一个存储库。</p>
-<img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/web_github_newRe.png" alt="web_github_newRe" style="zoom:80%;">
-
-
-
-
-
-<p>然后我们一定要在对存储库命名的时候一定要是你的昵称比如我们的就是：MingFang310.github.io </p>
-<p>然后我们点击create就好</p>
-<img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/web_github.png" alt="web_github" style="zoom:80%;">
-
-
-
-<p>【重要】随后我们需要在博客的目录下安装git的部署插件</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cnpm <span class="token function">install</span> --save hexo-deployer-git <span class="token comment">#在blog目录下安装git部署插件</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/cmd_hexo_deployer_git.png" alt="cmd_hexo_deployer_git" style="zoom:80%;">
-
-<p>(我这边自己已经装过一遍了，初次安装的时候，等待一下就好)</p>
-<p>同时我们也需要更改_config.yml文件的配置，这里我们用文本编辑器VSCode来打开该文件。</p>
-<p>点击进去以后找到#Deployment并且修改代码：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># Deployment	</span>
-<span class="token comment">## Docs: https://hexo.io/docs/deployment.html	</span>
-deploy:  		
-	type: <span class="token function">git</span> 		
-	repo: https://github.com/YourGithubName/YourGithubName.github.io.git  		
-	branch: master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>网站链接为你在GitHub上创建的存储库的链接</p>
-<p><img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/vscode_change_deployment.png" alt="vscode_change_deployment"></p>
-<p>最后一步，也就是使用命令行hexo d 对该博客部署到GitHub上面。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo d	<span class="token comment">#部署到远程Github仓库</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
-<p>最后我们就可以直接用我们GitHub网页链接的后半段直接访问我们的博客了！</p>
-<p><img src="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/web_blog_link.png" alt="web_blog_link"></p>
-<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ol>
-<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/xjm850552586/article/details/84101345">hexo引用本地图片无法显示:</a></p>
+<ul>
+<li>正数：原码、反码、补码相同，移码在<strong>符号位（首位）</strong>上取反。</li>
+<li>负数：<ul>
+<li>反码：<strong>符号位</strong>不变，<strong>数据位</strong>取反。</li>
+<li>补码：在<strong>反码</strong>的基础上<code>+1</code></li>
+<li>移码：<strong>补码</strong>的基础上，<strong>符号位</strong>取反。</li>
+</ul>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty?from=search&seid=15443300066182090076">手把手教你从0开始搭建自己的个人博客 |无坑版视频教程| hexo:</a></p>
+</ul>
+<h3 id="数值表示范围"><a href="#数值表示范围" class="headerlink" title="数值表示范围"></a>数值表示范围</h3><p><img src="/2021/08/23/ji-suan-ji-zu-cheng-yu-ti-xi-jie-gou/%E6%95%B0%E5%80%BC%E7%9A%84%E8%A1%A8%E7%A4%BA%E8%8C%83%E5%9B%B4.png" alt="数值的表示范围"></p>
+<p>当<code>n = 8</code>,也就是一共8个数位时：</p>
+<ul>
+<li>定点整数：<ul>
+<li>虽然是通过<code>+1</code>来实现了2^8，但是由于第一位是符号位，所以不显示，所以实际上<code>1000 0000</code>这个数无法显示出来。原码中正数和负数的数值表示范围为：$2^{n-1}$。同时，由于存在<code>-0</code>和<code>+0</code>这两个数（<code>1000 0000</code>&amp;<code>0000 0000</code>），所以在正数和负数那里分别将那个<code>-0</code>或者<code>+0</code>去掉，所以需要$2^{n-1} - 1$。</li>
+<li><strong>原码</strong>表示范围：-127 ~ +127，转为二进制：<code>1111 1111</code> ~ <code>0111 1111</code>。</li>
+<li><strong>补码</strong>表示范围：<code>1000 0000</code> ~ <code>0111 1111</code>。其中，<code>-128</code>的补码为<code>1 0000 0000</code>是<strong>人为规定</strong>的。</li>
+</ul>
 </li>
+<li>定点小数：<ul>
+<li>假设一个小数二进制表示：<code>0.111 1111</code>在加上<code>0.000 0001</code>就可以得到<code>1.000 0000</code>。同理，定点小数中的负数和正数的表示范围为：$+(1 - 2^{n-1})$~$-(1 - 2^{n-1})$。</li>
+<li><strong>原码</strong>表示范围：<code>-0.111 1111</code> ~ <code>+0.111 1111</code>。</li>
+<li><strong>补码</strong>表示范围：<code>-1</code> ~ <code>+0.111 1111</code>。其中，<code>-1</code>的补码为<code>1 0000 0000</code>是<strong>人为规定</strong>的。</li>
+</ul>
+</li>
+</ul>
+<p>注意：</p>
+<ul>
+<li><strong>原码</strong>和<strong>反码</strong>都存在<code>-0</code>和<code>+0</code>这两个数。</li>
+<li>在补码中的<code>-128</code>和<code>-1</code>都是<strong>人为规定</strong>的。</li>
+</ul>
+<h3 id="浮点数运算"><a href="#浮点数运算" class="headerlink" title="浮点数运算"></a>浮点数运算</h3><p>浮点数表示：$N = 尾数 * 基数^{指数}$</p>
+<p>运算过程：对阶 &gt; 尾数计算 &gt; 结果格式化</p>
+<p>特点：</p>
+<ol>
+<li>一般尾数用补码，阶码用移码。</li>
+<li><strong>阶码的位数</strong>决定数的<strong>表示范围</strong>，位数越多范围越大。</li>
+<li><strong>尾数的位数</strong>决定数的<strong>有效精度</strong>，位数越多精度越高。</li>
+<li>对阶时，<strong>小数向大数看齐</strong>。</li>
+<li>对阶是通过<strong>较小的尾数右移</strong>实现的。</li>
 </ol>
-
+<p>实例：</p>
+<p>$1.25 * 10^5 + 2.25 * 10^7$ ，我们需要将$1.25 * 10^5$转换为——&gt; $0.0125 * 10^7$，然后再进行运算为：$0.0125 * 10^5 + 2.25 * 10^7 = 2.2625 * 10^7$。</p>
+<h2 id="运算器与控制器【4】"><a href="#运算器与控制器【4】" class="headerlink" title="运算器与控制器【4】"></a>运算器与控制器【4】</h2><p>计算机结构</p>
+<p><img src="/2021/08/23/ji-suan-ji-zu-cheng-yu-ti-xi-jie-gou/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%93%E6%9E%84.png" alt="计算机结构"></p>
+<p>运算器：</p>
+<ol>
+<li><strong>算术逻辑单元ALU：数据的算数运算和逻辑运算。【重要】</strong></li>
+<li>累加寄存器AC：通用寄存器，为ALU提供一个工作区，用于暂存数据。【重要】</li>
+<li>数据缓冲寄存器DR：写内存是，暂存指令或数据。</li>
+<li>状态条件寄存器PSW：存状态标志与控制标志（<strong>争议：也有将其归为控制器</strong>）</li>
+</ol>
+<p>控制器：</p>
+<ol>
+<li><strong>程序计数器PC：存储下一条要执行指令的地址。【重要】</strong></li>
+<li>指令寄存器IR：存储即将执行的指令。【重要】</li>
+<li>指令译码器ID：对指令中的操作码字段进行分析解释。</li>
+<li>时序部件：提供时序控制信号。</li>
+</ol>
+<h2 id="Flyuu分类法【2】"><a href="#Flyuu分类法【2】" class="headerlink" title="Flyuu分类法【2】"></a>Flyuu分类法【2】</h2><p>计算机体现结构分类-Flynn</p>
+<ul>
+<li><code>I</code>：指令流</li>
+<li><code>D</code>：数据流</li>
+<li><code>S</code>：单</li>
+<li><code>M</code>：多</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">体系结构类型</th>
+<th align="center">结构</th>
+<th align="center">关键特性</th>
+<th align="center">代表</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">单指令流单数据流SISD</td>
+<td align="center">控制部分：一个；处理器：一个；主存模块：一个</td>
+<td align="center"></td>
+<td align="center">单处理器系统</td>
+</tr>
+<tr>
+<td align="center">单指令流多数据流SIMD</td>
+<td align="center">控制部分：一个；处理器：多个；主存模块：多个</td>
+<td align="center">各处理器以异步的形式执行同一条指令</td>
+<td align="center"><strong>并行处理机；阵列处理机；超级向量处理机</strong></td>
+</tr>
+<tr>
+<td align="center">多指令流单数据流MISD</td>
+<td align="center">控制部分：多个；处理器：一个；主存模块：多个</td>
+<td align="center">被证明<strong>不可能</strong>，至少是不实际的</td>
+<td align="center">目前没有，有文献称<strong>流水计算机</strong>为此类</td>
+</tr>
+<tr>
+<td align="center">多指令流多数据流MIMD</td>
+<td align="center">控制部分：多个；处理器：多个；主存模块：多个</td>
+<td align="center">能够实现<strong>作业、任务、指令</strong>等各级全面并行</td>
+<td align="center">多处理系统；多计算机</td>
+</tr>
+</tbody></table>
+<h2 id="CISC与RISC【2】"><a href="#CISC与RISC【2】" class="headerlink" title="CISC与RISC【2】"></a>CISC与RISC【2】</h2><table>
+<thead>
+<tr>
+<th>指令系统类型</th>
+<th>指令</th>
+<th>寻址方式</th>
+<th>实现方式</th>
+<th>其他</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CISC（复杂）</td>
+<td>数量多，是有频率差别大，可变长格式</td>
+<td>支持多种</td>
+<td>微程序控制技术（微码）</td>
+<td>研制周期长</td>
+</tr>
+<tr>
+<td>RISC（精简）</td>
+<td>数量少，使用频率接近，定长格式，大部分为单周期指令，操作寄存器，只有load/store操作内存</td>
+<td>支持方式少</td>
+<td>增加了通用寄存器；硬布线逻辑控制为主；适合采用流水线</td>
+<td>优化编译，有效支持高级语言。</td>
+</tr>
+</tbody></table>
+<hr>
+<p>CISC与RISC比较，分那些维度？</p>
+<ul>
+<li>指令数量、指令使用频率，寻址方式，寄存器，流水线支持，高级语言支持<ul>
+<li>CISC：复杂，指令数量多，频率差别大，多寻址</li>
+<li>RISC：精简，指令数量少，操作寄存器，单周期，少寻址，多通用寄存器，流水线</li>
+</ul>
+</li>
+</ul>
+<h3 id="指令的基本概念"><a href="#指令的基本概念" class="headerlink" title="指令的基本概念"></a>指令的基本概念</h3><p>每一条指令就是计算机语言的一个语句，它是一组有意义的二进制代码，指令的基本格式如下：</p>
+<table>
+<thead>
+<tr>
+<th>操作码字段</th>
+<th>地址码字段</th>
+</tr>
+</thead>
+</table>
+<p>操作码部分指出了计算机要执行什么性质的操作，如加法、减法、取数、存数等。地址码字段需要包含各操作数的地址及操作结果的存放地址等，从其地址结构的角度可以分为三地址指令、二地址指令、一地址指令和零地址指令。</p>
+<p>三地址指令</p>
+<table>
+<thead>
+<tr>
+<th>OP</th>
+<th>A1</th>
+<th>A2</th>
+<th>A3</th>
+</tr>
+</thead>
+</table>
+<p>二地址指令</p>
+<table>
+<thead>
+<tr>
+<th>OP</th>
+<th>A1</th>
+<th>A2</th>
+</tr>
+</thead>
+</table>
+<p>一地址指令</p>
+<table>
+<thead>
+<tr>
+<th>OP</th>
+<th>A1</th>
+</tr>
+</thead>
+</table>
+<p>零地址指令</p>
+<table>
+<thead>
+<tr>
+<th>OP</th>
+</tr>
+</thead>
+</table>
+<h3 id="寻址方式"><a href="#寻址方式" class="headerlink" title="寻址方式"></a>寻址方式</h3><ul>
+<li>立即寻址方式<ul>
+<li>特点：操作数直接在指令中，速度快，灵活性差</li>
+</ul>
+</li>
+<li>直接寻址方式<ul>
+<li>特点：指令中存放的是操作数的地址</li>
+</ul>
+</li>
+<li>间接寻址方式<ul>
+<li>特点：指令中存放了一个地址，这个地址对应的内容是操作数的地址</li>
+</ul>
+</li>
+<li>寄存器寻址方式<ul>
+<li>特点：寄存器存放操作数</li>
+</ul>
+</li>
+<li>寄存器间接寻址方式<ul>
+<li>特点：寄存器内存放的是操作数的地址</li>
+</ul>
+</li>
+</ul>
+<h2 id="流水线技术【4】"><a href="#流水线技术【4】" class="headerlink" title="流水线技术【4】"></a>流水线技术【4】</h2><h3 id="流水线-概念"><a href="#流水线-概念" class="headerlink" title="流水线 - 概念"></a>流水线 - 概念</h3><p>相关参数计算：<strong>流水线执行时间计算</strong>、<strong>流水线吞吐率</strong>、流水线加速比、流水线效率</p>
+<p>流水线是指在程序执行时<strong>多条指令重叠进行操作</strong>的一种准并行处理实现技术。各种部件同时处理是针对不同指令而言的，它们可同时为多条指令的不同部分进行工作，以提高各部件的利用率和指令的平均执行速度。</p>
+<p><img src="/2021/08/23/ji-suan-ji-zu-cheng-yu-ti-xi-jie-gou/%E6%B5%81%E6%B0%B4%E7%BA%BF%E6%A6%82%E5%BF%B5.png" alt="流水线概念"></p>
+<h3 id="流水线-流水线计算"><a href="#流水线-流水线计算" class="headerlink" title="流水线 - 流水线计算"></a>流水线 - 流水线计算</h3><ul>
+<li>流水线建立时间：流水线<strong>第一条指令</strong>完成的时间</li>
+<li>流水线周期：分段之后，指令当中执行时间最长的一段。</li>
+</ul>
+<p>流水线计算公式为：</p>
+<ul>
+<li>1条指令执行时间 + （指令条数 - 1）* 流水线周期<ul>
+<li>理论公式：(t1 + t2 + t3 +…+ tk) + (n - 1) * $\Delta t$</li>
+<li>实践公式：k * $\Delta t$ + (n - 1) * $\Delta t$</li>
+</ul>
+</li>
+</ul>
+<p>(此处的$\Delta t$为流水线周期，而在题目中的$\Delta t$更多的指示的是单位时间)</p>
+<p>例题：</p>
+<ul>
+<li>一条指令的执行过程可以分解为取指、分析和执行三步,在<strong>取指时间t</strong>取指=3$\Delta t$、<strong>分析时间t</strong>分析=2$\Delta t$、<strong>执行时间t</strong>执行=4$\Delta t$的情况下，若按<strong>串行方式（顺序执行）</strong>执行，则10条指令全部执行完需多少个$\Delta t$？<ul>
+<li>由于是顺序执行，所以是求出一个指令建立的时间 * 全部指令个数</li>
+<li>（3 + 2 + 4) * $\Delta t$ * 10 = 90$\Delta t$</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>若按流水线的方式执行，流水线周期为多少个$\Delta t$？则10条指令全部执行完需要需多少个$\Delta t$？</p>
+<ul>
+<li>流水线周期不用特地计算，直接判断在完成指令的过程中花费最长时间的是哪一段就好。</li>
+<li>我们可以看出<strong>执行时间t</strong>执行=4$\Delta t$，在整个执行指令的过程中花费了最多的时间。所以，<strong>流水线周期</strong>就为：4$\Delta t$</li>
+<li>则10条指令全部执行完需要需多少个$\Delta t$：((3 + 2 + 4) + (10 - 1) * 4） * $\Delta t$ = 45$\Delta t$</li>
+</ul>
+</li>
+<li><p>理论公式：(t1 + t2 + t3 +…+ tk) + （n - 1） * $\Delta t$</p>
+</li>
+</ul>
+<p><img src="/2021/08/23/ji-suan-ji-zu-cheng-yu-ti-xi-jie-gou/%E6%B5%81%E6%B0%B4%E7%BA%BF%E8%AE%A1%E7%AE%97-%E7%90%86%E8%AE%BA%E5%85%AC%E5%BC%8F.png" alt="流水线计算-理论公式"></p>
+<ul>
+<li>实践公式：k * $\Delta t$ + (n - 1) * $\Delta t$</li>
+</ul>
+<p><img src="/2021/08/23/ji-suan-ji-zu-cheng-yu-ti-xi-jie-gou/%E6%B5%81%E6%B0%B4%E7%BA%BF%E8%AE%A1%E7%AE%97-%E5%AE%9E%E8%B7%B5%E5%85%AC%E5%BC%8F.png" alt="流水线计算-实践公式"></p>
+<p>（<strong>注意：在选择题中，如果发现没有45$\Delta t$的选项出现的话，就需要套用实践公式来解题</strong>）</p>
+<ul>
+<li>这里的指令执行周期还是4$\Delta t$<ul>
+<li>所以，套用公式：3 * 4$\Delta t$ + (10 - 1) * 4$\Delta t$ = 48$\Delta t$</li>
+</ul>
+</li>
+</ul>
+<h3 id="流水线-流水线吞吐率计算"><a href="#流水线-流水线吞吐率计算" class="headerlink" title="流水线-流水线吞吐率计算"></a>流水线-流水线吞吐率计算</h3><p>流水线的吞吐率(Though Put rate, TP)是指在<strong>单位时间内流水线所完成的任务数量或输出的结果数量</strong>。计算流水线吞吐率的最基本公式如下：<code>TP = 指令条数 / 流水线执行时间</code></p>
+<p>流水线最大吞吐率：流水线最大吞吐率 = 流水线周期的倒数</p>
+<p><img src="/2021/08/23/ji-suan-ji-zu-cheng-yu-ti-xi-jie-gou/%E6%B5%81%E6%B0%B4%E7%BA%BF%E6%9C%80%E5%A4%A7%E5%90%9E%E5%90%90%E7%8E%87%E5%85%AC%E5%BC%8F.png" alt="流水线最大吞吐率公式"></p>
+<h3 id="流水线-超标量流水线"><a href="#流水线-超标量流水线" class="headerlink" title="流水线-超标量流水线"></a>流水线-超标量流水线</h3><p><img src="/2021/08/23/ji-suan-ji-zu-cheng-yu-ti-xi-jie-gou/%E6%B5%81%E6%B0%B4%E7%BA%BF-%E8%B6%85%E6%A0%87%E9%87%8F%E6%B5%81%E6%B0%B4%E7%BA%BF.png" alt="流水线-超标量流水线"></p>
+<p>新提出一个参数：<strong>度</strong>。</p>
+<p><strong>度</strong>：指的是在某一时刻、某一个部件它可以同时处理的指令数量。</p>
+<h2 id="存储系统【4】"><a href="#存储系统【4】" class="headerlink" title="存储系统【4】"></a>存储系统【4】</h2><h2 id="总线系统【1】"><a href="#总线系统【1】" class="headerlink" title="总线系统【1】"></a>总线系统【1】</h2><h2 id="可靠性【1】"><a href="#可靠性【1】" class="headerlink" title="可靠性【1】"></a>可靠性【1】</h2><h2 id="校验码【3】"><a href="#校验码【3】" class="headerlink" title="校验码【3】"></a>校验码【3】</h2>
                 
             </div>
             <hr/>
@@ -613,7 +738,7 @@ deploy:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://shadowprism.cn/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/">https://shadowprism.cn/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/</a>
+                    <a href="https://shadowprism.cn/2021/08/23/ji-suan-ji-zu-cheng-yu-ti-xi-jie-gou/">https://shadowprism.cn/2021/08/23/ji-suan-ji-zu-cheng-yu-ti-xi-jie-gou/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -651,20 +776,16 @@ deploy:
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Typora/">
-                                    <span class="chip bg-color">Typora</span>
+                                <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/">
+                                    <span class="chip bg-color">软件开发</span>
                                 </a>
                             
-                                <a href="/tags/Hexo/">
-                                    <span class="chip bg-color">Hexo</span>
+                                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/">
+                                    <span class="chip bg-color">计算机组成</span>
                                 </a>
                             
-                                <a href="/tags/Git/">
-                                    <span class="chip bg-color">Git</span>
-                                </a>
-                            
-                                <a href="/tags/GitHub/">
-                                    <span class="chip bg-color">GitHub</span>
+                                <a href="/tags/%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA/">
+                                    <span class="chip bg-color">数据的表示</span>
                                 </a>
                             
                         </div>
@@ -836,29 +957,88 @@ deploy:
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/07/07/dos-ji-ben-zhi-ling/">
+                <a href="/2021/08/23/ji-suan-ji-zu-cheng-yu-ti-xi-jie-gou/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="DOS基本指令">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="计算机组成与体系结构">
                         
-                        <span class="card-title">DOS基本指令</span>
+                        <span class="card-title">计算机组成与体系结构</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            DOS常用的基本指令
+                            介绍了计算机组成与体系结构中的数据的表示方式。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-07
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-23
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/" class="post-category">
+                                    软件开发
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/">
+                        <span class="chip bg-color">软件开发</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/">
+                        <span class="chip bg-color">计算机组成</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA/">
+                        <span class="chip bg-color">数据的表示</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/07/17/java-xue-xi-bi-ji-6-mian-xiang-dui-xiang-bian-cheng/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="java学习笔记6-面向对象编程">
+                        
+                        <span class="card-title">java学习笔记6-面向对象编程</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            将会介绍java的面向对象编程。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -874,78 +1054,12 @@ deploy:
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/DOS/">
-                        <span class="chip bg-color">DOS</span>
-                    </a>
-                    
-                    <a href="/tags/Typora/">
-                        <span class="chip bg-color">Typora</span>
-                    </a>
-                    
                     <a href="/tags/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/">
                         <span class="chip bg-color">自学笔记</span>
                     </a>
                     
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/07/05/ge-ren-bo-ke-de-da-jian-yi-ji-xue-xi-li-cheng/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="个人博客的搭建以及学习历程">
-                        
-                        <span class="card-title">个人博客的搭建以及学习历程</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-05
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Typora/">
-                        <span class="chip bg-color">Typora</span>
-                    </a>
-                    
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
-                    </a>
-                    
-                    <a href="/tags/Git/">
-                        <span class="chip bg-color">Git</span>
-                    </a>
-                    
-                    <a href="/tags/GitHub/">
-                        <span class="chip bg-color">GitHub</span>
+                    <a href="/tags/java/">
+                        <span class="chip bg-color">java</span>
                     </a>
                     
                 </div>
@@ -1113,6 +1227,13 @@ deploy:
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 
 
